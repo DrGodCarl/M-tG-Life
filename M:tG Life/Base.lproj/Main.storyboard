@@ -1,25 +1,147 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YXF-Bf-xbF">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Base Tab Bar Controller-->
+        <scene sceneID="jsd-uI-pEj">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="YXF-Bf-xbF" customClass="BaseTabBarController" customModule="M_tG_Life" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="9dQ-29-7fC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="oiX-qM-UI7" kind="relationship" relationship="viewControllers" id="Agv-kJ-qN8"/>
+                        <segue destination="MLZ-fi-E6I" kind="relationship" relationship="viewControllers" id="BbA-7l-KYz"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ra8-zL-uUr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-632" y="-203"/>
+        </scene>
+        <!--Search Collection-->
+        <scene sceneID="OIl-Is-1kH">
+            <objects>
+                <viewController id="oiX-qM-UI7" customClass="SearchCollectionViewController" customModule="M_tG_Life" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="NBJ-iX-yBI"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bha-Pf-Ima"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="ZCL-kL-HtP">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IUW-E9-5ao">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <connections>
+                                    <segue destination="iPo-O0-MdU" kind="embed" id="u33-rn-DhU"/>
+                                </connections>
+                            </containerView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="vv7-cE-91X">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vv7-cE-91X" firstAttribute="leading" secondItem="ZCL-kL-HtP" secondAttribute="leadingMargin" constant="-20" id="HLH-7Q-6R4"/>
+                            <constraint firstItem="Bha-Pf-Ima" firstAttribute="top" secondItem="IUW-E9-5ao" secondAttribute="bottom" constant="-49" id="I1J-QM-v9e"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vv7-cE-91X" secondAttribute="trailing" constant="-20" id="PF2-yW-ep8"/>
+                            <constraint firstItem="vv7-cE-91X" firstAttribute="top" secondItem="NBJ-iX-yBI" secondAttribute="bottom" id="Qhn-yK-D7h"/>
+                            <constraint firstItem="IUW-E9-5ao" firstAttribute="top" secondItem="vv7-cE-91X" secondAttribute="bottom" id="gsi-kE-HdE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IUW-E9-5ao" secondAttribute="trailing" constant="-20" id="hIa-7A-h54"/>
+                            <constraint firstItem="IUW-E9-5ao" firstAttribute="leading" secondItem="ZCL-kL-HtP" secondAttribute="leadingMargin" constant="-20" id="ua7-1M-0za"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Search Collection" id="Bfa-jj-CDv"/>
+                    <connections>
+                        <outlet property="viewModel" destination="nUx-fs-PjS" id="drr-lP-ikV"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="51D-fv-mgg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="nUx-fs-PjS" customClass="SearchCollectionViewModel" customModule="M_tG_Life" customModuleProvider="target"/>
             </objects>
+            <point key="canvasLocation" x="180" y="-588"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="btp-Rb-r7u">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S8f-9E-mcS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="iPo-O0-MdU" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="jaa-DO-rnp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CardCell" id="92W-Mn-P2H">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="92W-Mn-P2H" id="Iya-4X-DkB">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="iPo-O0-MdU" id="7Hr-b9-PFm"/>
+                            <outlet property="delegate" destination="iPo-O0-MdU" id="EZk-4L-ZMa"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="1043" y="-203"/>
+        </scene>
+        <!--Add to Collection-->
+        <scene sceneID="w8D-yN-igc">
+            <objects>
+                <viewController id="MLZ-fi-E6I" customClass="AddCollectionViewController" customModule="M_tG_Life" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uJS-GP-EDW"/>
+                        <viewControllerLayoutGuide type="bottom" id="RJ6-uC-6QD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e6J-5z-QdL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="T4m-ky-QKD">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GCP-fu-goV">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <connections>
+                                    <segue destination="iPo-O0-MdU" kind="embed" id="AOi-ee-T7C"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="GCP-fu-goV" secondAttribute="trailing" constant="-20" id="SPa-tV-Y5Q"/>
+                            <constraint firstItem="RJ6-uC-6QD" firstAttribute="top" secondItem="GCP-fu-goV" secondAttribute="bottom" constant="-49" id="Zh6-Yb-1ot"/>
+                            <constraint firstItem="GCP-fu-goV" firstAttribute="top" secondItem="T4m-ky-QKD" secondAttribute="bottom" id="hhg-h7-EaM"/>
+                            <constraint firstItem="GCP-fu-goV" firstAttribute="leading" secondItem="e6J-5z-QdL" secondAttribute="leadingMargin" constant="-20" id="inz-zx-lhz"/>
+                            <constraint firstItem="T4m-ky-QKD" firstAttribute="top" secondItem="uJS-GP-EDW" secondAttribute="bottom" id="kSv-uf-aYA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T4m-ky-QKD" secondAttribute="trailing" constant="-20" id="wPP-is-CrP"/>
+                            <constraint firstItem="T4m-ky-QKD" firstAttribute="leading" secondItem="e6J-5z-QdL" secondAttribute="leadingMargin" constant="-20" id="wUs-33-OiW"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Add to Collection" id="UVg-4I-XbI"/>
+                    <connections>
+                        <outlet property="viewModel" destination="Laf-ir-vTd" id="jcV-x9-AKM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LTQ-sS-ZOG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="Laf-ir-vTd" customClass="AddCollectionViewModel" customModule="M_tG_Life" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="180" y="221"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="AOi-ee-T7C"/>
+    </inferredMetricsTieBreakers>
 </document>

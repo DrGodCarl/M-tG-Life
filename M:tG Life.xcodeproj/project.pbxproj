@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE08842C1C06D1930077EA06 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE08842B1C06D1920077EA06 /* CoreDataManager.swift */; };
 		BE35A7EB1C039D2500AF6BA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE35A7EA1C039D2500AF6BA2 /* AppDelegate.swift */; };
 		BE35A7ED1C039D2500AF6BA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE35A7EC1C039D2500AF6BA2 /* ViewController.swift */; };
 		BE35A7F01C039D2500AF6BA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE35A7EE1C039D2500AF6BA2 /* Main.storyboard */; };
-		BE35A7F31C039D2500AF6BA2 /* M_tG_Life.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE35A7F11C039D2500AF6BA2 /* M_tG_Life.xcdatamodeld */; };
 		BE35A7F51C039D2500AF6BA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE35A7F41C039D2500AF6BA2 /* Assets.xcassets */; };
 		BE35A7F81C039D2500AF6BA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE35A7F61C039D2500AF6BA2 /* LaunchScreen.storyboard */; };
 		BE35A8031C039D2500AF6BA2 /* M_tG_LifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE35A8021C039D2500AF6BA2 /* M_tG_LifeTests.swift */; };
 		BE35A80E1C039D2500AF6BA2 /* M_tG_LifeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE35A80D1C039D2500AF6BA2 /* M_tG_LifeUITests.swift */; };
+		BE3C22511C06708600975A47 /* SearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3C22501C06708600975A47 /* SearchResultsTableViewController.swift */; };
+		BE3C22551C06782100975A47 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3C22541C06782100975A47 /* BaseTabBarController.swift */; };
+		BEC5CE961C0624760061FDE5 /* CardModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BEC5CE941C0624760061FDE5 /* CardModel.xcdatamodeld */; };
+		BEC5CE9F1C06324C0061FDE5 /* SearchCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC5CE9D1C06324C0061FDE5 /* SearchCollectionViewController.swift */; };
+		BEC5CEA01C06324C0061FDE5 /* SearchCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC5CE9E1C06324C0061FDE5 /* SearchCollectionViewModel.swift */; };
+		BEC5CEA31C0632890061FDE5 /* AddCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC5CEA21C0632890061FDE5 /* AddCollectionViewController.swift */; };
+		BEC5CEA51C0632970061FDE5 /* AddCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC5CEA41C0632970061FDE5 /* AddCollectionViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE08842B1C06D1920077EA06 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		BE35A7E71C039D2500AF6BA2 /* M:tG Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "M:tG Life.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE35A7EA1C039D2500AF6BA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE35A7EC1C039D2500AF6BA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BE35A7EF1C039D2500AF6BA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BE35A7F21C039D2500AF6BA2 /* M_tG_Life.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = M_tG_Life.xcdatamodel; sourceTree = "<group>"; };
 		BE35A7F41C039D2500AF6BA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE35A7F71C039D2500AF6BA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE35A7F91C039D2500AF6BA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +56,13 @@
 		BE35A8091C039D2500AF6BA2 /* M:tG LifeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "M:tG LifeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE35A80D1C039D2500AF6BA2 /* M_tG_LifeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M_tG_LifeUITests.swift; sourceTree = "<group>"; };
 		BE35A80F1C039D2500AF6BA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE3C22501C06708600975A47 /* SearchResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewController.swift; sourceTree = "<group>"; };
+		BE3C22541C06782100975A47 /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		BEC5CE951C0624760061FDE5 /* CardModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CardModel.xcdatamodel; sourceTree = "<group>"; };
+		BEC5CE9D1C06324C0061FDE5 /* SearchCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewController.swift; sourceTree = "<group>"; };
+		BEC5CE9E1C06324C0061FDE5 /* SearchCollectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewModel.swift; sourceTree = "<group>"; };
+		BEC5CEA21C0632890061FDE5 /* AddCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCollectionViewController.swift; sourceTree = "<group>"; };
+		BEC5CEA41C0632970061FDE5 /* AddCollectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCollectionViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE08842A1C06D1790077EA06 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				BE08842B1C06D1920077EA06 /* CoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		BE35A7DE1C039D2500AF6BA2 = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +121,18 @@
 		BE35A7E91C039D2500AF6BA2 /* M:tG Life */ = {
 			isa = PBXGroup;
 			children = (
+				BE08842A1C06D1790077EA06 /* CoreData */,
+				BE3C224F1C06705200975A47 /* SearchResults */,
+				BEC5CEA11C0632790061FDE5 /* AddCollection */,
+				BEC5CE9C1C06324C0061FDE5 /* SearchCollection */,
 				BE35A7EA1C039D2500AF6BA2 /* AppDelegate.swift */,
+				BE3C22541C06782100975A47 /* BaseTabBarController.swift */,
 				BE35A7EC1C039D2500AF6BA2 /* ViewController.swift */,
 				BE35A7EE1C039D2500AF6BA2 /* Main.storyboard */,
 				BE35A7F41C039D2500AF6BA2 /* Assets.xcassets */,
 				BE35A7F61C039D2500AF6BA2 /* LaunchScreen.storyboard */,
 				BE35A7F91C039D2500AF6BA2 /* Info.plist */,
-				BE35A7F11C039D2500AF6BA2 /* M_tG_Life.xcdatamodeld */,
+				BEC5CE941C0624760061FDE5 /* CardModel.xcdatamodeld */,
 			);
 			path = "M:tG Life";
 			sourceTree = "<group>";
@@ -126,6 +153,32 @@
 				BE35A80F1C039D2500AF6BA2 /* Info.plist */,
 			);
 			path = "M:tG LifeUITests";
+			sourceTree = "<group>";
+		};
+		BE3C224F1C06705200975A47 /* SearchResults */ = {
+			isa = PBXGroup;
+			children = (
+				BE3C22501C06708600975A47 /* SearchResultsTableViewController.swift */,
+			);
+			path = SearchResults;
+			sourceTree = "<group>";
+		};
+		BEC5CE9C1C06324C0061FDE5 /* SearchCollection */ = {
+			isa = PBXGroup;
+			children = (
+				BEC5CE9D1C06324C0061FDE5 /* SearchCollectionViewController.swift */,
+				BEC5CE9E1C06324C0061FDE5 /* SearchCollectionViewModel.swift */,
+			);
+			path = SearchCollection;
+			sourceTree = "<group>";
+		};
+		BEC5CEA11C0632790061FDE5 /* AddCollection */ = {
+			isa = PBXGroup;
+			children = (
+				BEC5CEA21C0632890061FDE5 /* AddCollectionViewController.swift */,
+				BEC5CEA41C0632970061FDE5 /* AddCollectionViewModel.swift */,
+			);
+			path = AddCollection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +312,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE3C22511C06708600975A47 /* SearchResultsTableViewController.swift in Sources */,
+				BEC5CEA51C0632970061FDE5 /* AddCollectionViewModel.swift in Sources */,
+				BE3C22551C06782100975A47 /* BaseTabBarController.swift in Sources */,
+				BEC5CE9F1C06324C0061FDE5 /* SearchCollectionViewController.swift in Sources */,
 				BE35A7ED1C039D2500AF6BA2 /* ViewController.swift in Sources */,
+				BEC5CEA01C06324C0061FDE5 /* SearchCollectionViewModel.swift in Sources */,
+				BEC5CEA31C0632890061FDE5 /* AddCollectionViewController.swift in Sources */,
+				BEC5CE961C0624760061FDE5 /* CardModel.xcdatamodeld in Sources */,
+				BE08842C1C06D1930077EA06 /* CoreDataManager.swift in Sources */,
 				BE35A7EB1C039D2500AF6BA2 /* AppDelegate.swift in Sources */,
-				BE35A7F31C039D2500AF6BA2 /* M_tG_Life.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +548,7 @@
 				BE35A8141C039D2500AF6BA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE35A8151C039D2500AF6BA2 /* Build configuration list for PBXNativeTarget "M:tG LifeTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +557,7 @@
 				BE35A8171C039D2500AF6BA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE35A8181C039D2500AF6BA2 /* Build configuration list for PBXNativeTarget "M:tG LifeUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,17 +566,18 @@
 				BE35A81A1C039D2500AF6BA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		BE35A7F11C039D2500AF6BA2 /* M_tG_Life.xcdatamodeld */ = {
+		BEC5CE941C0624760061FDE5 /* CardModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				BE35A7F21C039D2500AF6BA2 /* M_tG_Life.xcdatamodel */,
+				BEC5CE951C0624760061FDE5 /* CardModel.xcdatamodel */,
 			);
-			currentVersion = BE35A7F21C039D2500AF6BA2 /* M_tG_Life.xcdatamodel */;
-			path = M_tG_Life.xcdatamodeld;
+			currentVersion = BEC5CE951C0624760061FDE5 /* CardModel.xcdatamodel */;
+			path = CardModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
