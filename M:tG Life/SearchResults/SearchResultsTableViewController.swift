@@ -9,6 +9,7 @@
 import UIKit
 
 class SearchResultsTableViewController: UITableViewController {
+    private var searchResults: CardSearchResultsProtocol!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +30,12 @@ class SearchResultsTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return searchResults.numberOfSections()
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return searchResults.numberOfObjectsInSection(section)
     }
 
     /*
@@ -91,5 +92,14 @@ class SearchResultsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+    func setSearchResults(searchResults: CardSearchResultsProtocol) {
+        self.searchResults = searchResults
+        self.tableView.reloadData()
+    }
+
+    func refresh() {
+        self.tableView.reloadData()
+    }
 
 }

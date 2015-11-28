@@ -17,7 +17,17 @@
 		BE35A80E1C039D2500AF6BA2 /* M_tG_LifeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE35A80D1C039D2500AF6BA2 /* M_tG_LifeUITests.swift */; };
 		BE3C22511C06708600975A47 /* SearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3C22501C06708600975A47 /* SearchResultsTableViewController.swift */; };
 		BE3C22551C06782100975A47 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3C22541C06782100975A47 /* BaseTabBarController.swift */; };
-		BEC5CE961C0624760061FDE5 /* CardModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BEC5CE941C0624760061FDE5 /* CardModel.xcdatamodeld */; };
+		BE50B1551C0903FF001D467C /* CardSearchResultsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50B1541C0903FF001D467C /* CardSearchResultsProtocol.swift */; };
+		BE50B1581C0915ED001D467C /* CardModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE50B1561C0915ED001D467C /* CardModel.xcdatamodeld */; };
+		BE50B1E01C091A47001D467C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50B1DF1C091A47001D467C /* Card.swift */; };
+		BE50B1E91C091DAC001D467C /* CDDeck+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50B1E11C091DAC001D467C /* CDDeck+CoreDataProperties.swift */; };
+		BE50B1EA1C091DAC001D467C /* CDDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50B1E21C091DAC001D467C /* CDDeck.swift */; };
+		BE50B1EB1C091DAC001D467C /* CDCardCount+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50B1E31C091DAC001D467C /* CDCardCount+CoreDataProperties.swift */; };
+		BE50B1EC1C091DAC001D467C /* CDCardCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50B1E41C091DAC001D467C /* CDCardCount.swift */; };
+		BE50B1ED1C091DAC001D467C /* CDCard+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50B1E51C091DAC001D467C /* CDCard+CoreDataProperties.swift */; };
+		BE50B1EE1C091DAC001D467C /* CDCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50B1E61C091DAC001D467C /* CDCard.swift */; };
+		BE50B1EF1C091DAC001D467C /* CDColor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50B1E71C091DAC001D467C /* CDColor+CoreDataProperties.swift */; };
+		BE50B1F01C091DAC001D467C /* CDColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50B1E81C091DAC001D467C /* CDColor.swift */; };
 		BEC5CE9F1C06324C0061FDE5 /* SearchCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC5CE9D1C06324C0061FDE5 /* SearchCollectionViewController.swift */; };
 		BEC5CEA01C06324C0061FDE5 /* SearchCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC5CE9E1C06324C0061FDE5 /* SearchCollectionViewModel.swift */; };
 		BEC5CEA31C0632890061FDE5 /* AddCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC5CEA21C0632890061FDE5 /* AddCollectionViewController.swift */; };
@@ -58,7 +68,17 @@
 		BE35A80F1C039D2500AF6BA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE3C22501C06708600975A47 /* SearchResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewController.swift; sourceTree = "<group>"; };
 		BE3C22541C06782100975A47 /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
-		BEC5CE951C0624760061FDE5 /* CardModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CardModel.xcdatamodel; sourceTree = "<group>"; };
+		BE50B1541C0903FF001D467C /* CardSearchResultsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSearchResultsProtocol.swift; sourceTree = "<group>"; };
+		BE50B1571C0915ED001D467C /* CardModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CardModel.xcdatamodel; sourceTree = "<group>"; };
+		BE50B1DF1C091A47001D467C /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		BE50B1E11C091DAC001D467C /* CDDeck+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDDeck+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BE50B1E21C091DAC001D467C /* CDDeck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDDeck.swift; sourceTree = "<group>"; };
+		BE50B1E31C091DAC001D467C /* CDCardCount+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDCardCount+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BE50B1E41C091DAC001D467C /* CDCardCount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDCardCount.swift; sourceTree = "<group>"; };
+		BE50B1E51C091DAC001D467C /* CDCard+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDCard+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BE50B1E61C091DAC001D467C /* CDCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDCard.swift; sourceTree = "<group>"; };
+		BE50B1E71C091DAC001D467C /* CDColor+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDColor+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BE50B1E81C091DAC001D467C /* CDColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDColor.swift; sourceTree = "<group>"; };
 		BEC5CE9D1C06324C0061FDE5 /* SearchCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewController.swift; sourceTree = "<group>"; };
 		BEC5CE9E1C06324C0061FDE5 /* SearchCollectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewModel.swift; sourceTree = "<group>"; };
 		BEC5CEA21C0632890061FDE5 /* AddCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCollectionViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				BE08842B1C06D1920077EA06 /* CoreDataManager.swift */,
+				BE50B1561C0915ED001D467C /* CardModel.xcdatamodeld */,
+				BE50B1AB1C0916C2001D467C /* ManagedObjectSubclasses */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -121,6 +143,7 @@
 		BE35A7E91C039D2500AF6BA2 /* M:tG Life */ = {
 			isa = PBXGroup;
 			children = (
+				BE50B1CC1C0918EC001D467C /* Model */,
 				BE08842A1C06D1790077EA06 /* CoreData */,
 				BE3C224F1C06705200975A47 /* SearchResults */,
 				BEC5CEA11C0632790061FDE5 /* AddCollection */,
@@ -132,7 +155,6 @@
 				BE35A7F41C039D2500AF6BA2 /* Assets.xcassets */,
 				BE35A7F61C039D2500AF6BA2 /* LaunchScreen.storyboard */,
 				BE35A7F91C039D2500AF6BA2 /* Info.plist */,
-				BEC5CE941C0624760061FDE5 /* CardModel.xcdatamodeld */,
 			);
 			path = "M:tG Life";
 			sourceTree = "<group>";
@@ -159,8 +181,32 @@
 			isa = PBXGroup;
 			children = (
 				BE3C22501C06708600975A47 /* SearchResultsTableViewController.swift */,
+				BE50B1541C0903FF001D467C /* CardSearchResultsProtocol.swift */,
 			);
 			path = SearchResults;
+			sourceTree = "<group>";
+		};
+		BE50B1AB1C0916C2001D467C /* ManagedObjectSubclasses */ = {
+			isa = PBXGroup;
+			children = (
+				BE50B1E11C091DAC001D467C /* CDDeck+CoreDataProperties.swift */,
+				BE50B1E21C091DAC001D467C /* CDDeck.swift */,
+				BE50B1E31C091DAC001D467C /* CDCardCount+CoreDataProperties.swift */,
+				BE50B1E41C091DAC001D467C /* CDCardCount.swift */,
+				BE50B1E51C091DAC001D467C /* CDCard+CoreDataProperties.swift */,
+				BE50B1E61C091DAC001D467C /* CDCard.swift */,
+				BE50B1E71C091DAC001D467C /* CDColor+CoreDataProperties.swift */,
+				BE50B1E81C091DAC001D467C /* CDColor.swift */,
+			);
+			path = ManagedObjectSubclasses;
+			sourceTree = "<group>";
+		};
+		BE50B1CC1C0918EC001D467C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BE50B1DF1C091A47001D467C /* Card.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		BEC5CE9C1C06324C0061FDE5 /* SearchCollection */ = {
@@ -314,12 +360,22 @@
 			files = (
 				BE3C22511C06708600975A47 /* SearchResultsTableViewController.swift in Sources */,
 				BEC5CEA51C0632970061FDE5 /* AddCollectionViewModel.swift in Sources */,
+				BE50B1F01C091DAC001D467C /* CDColor.swift in Sources */,
+				BE50B1E91C091DAC001D467C /* CDDeck+CoreDataProperties.swift in Sources */,
 				BE3C22551C06782100975A47 /* BaseTabBarController.swift in Sources */,
+				BE50B1EE1C091DAC001D467C /* CDCard.swift in Sources */,
 				BEC5CE9F1C06324C0061FDE5 /* SearchCollectionViewController.swift in Sources */,
+				BE50B1ED1C091DAC001D467C /* CDCard+CoreDataProperties.swift in Sources */,
+				BE50B1EF1C091DAC001D467C /* CDColor+CoreDataProperties.swift in Sources */,
+				BE50B1E01C091A47001D467C /* Card.swift in Sources */,
+				BE50B1EC1C091DAC001D467C /* CDCardCount.swift in Sources */,
+				BE50B1EB1C091DAC001D467C /* CDCardCount+CoreDataProperties.swift in Sources */,
 				BE35A7ED1C039D2500AF6BA2 /* ViewController.swift in Sources */,
+				BE50B1551C0903FF001D467C /* CardSearchResultsProtocol.swift in Sources */,
+				BE50B1581C0915ED001D467C /* CardModel.xcdatamodeld in Sources */,
 				BEC5CEA01C06324C0061FDE5 /* SearchCollectionViewModel.swift in Sources */,
 				BEC5CEA31C0632890061FDE5 /* AddCollectionViewController.swift in Sources */,
-				BEC5CE961C0624760061FDE5 /* CardModel.xcdatamodeld in Sources */,
+				BE50B1EA1C091DAC001D467C /* CDDeck.swift in Sources */,
 				BE08842C1C06D1930077EA06 /* CoreDataManager.swift in Sources */,
 				BE35A7EB1C039D2500AF6BA2 /* AppDelegate.swift in Sources */,
 			);
@@ -463,10 +519,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "M:tG Life/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zeropointlogic.M-tG-Life";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "M:tG Life/CoreData/M:tG Life-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -474,10 +533,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "M:tG Life/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zeropointlogic.M-tG-Life";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "M:tG Life/CoreData/M:tG Life-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -571,12 +632,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		BEC5CE941C0624760061FDE5 /* CardModel.xcdatamodeld */ = {
+		BE50B1561C0915ED001D467C /* CardModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				BEC5CE951C0624760061FDE5 /* CardModel.xcdatamodel */,
+				BE50B1571C0915ED001D467C /* CardModel.xcdatamodel */,
 			);
-			currentVersion = BEC5CE951C0624760061FDE5 /* CardModel.xcdatamodel */;
+			currentVersion = BE50B1571C0915ED001D467C /* CardModel.xcdatamodel */;
 			path = CardModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

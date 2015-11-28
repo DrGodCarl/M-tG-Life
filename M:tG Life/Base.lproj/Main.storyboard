@@ -39,7 +39,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IUW-E9-5ao">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <connections>
-                                    <segue destination="iPo-O0-MdU" kind="embed" id="u33-rn-DhU"/>
+                                    <segue destination="iPo-O0-MdU" kind="embed" identifier="SearchCollectionContained" id="u33-rn-DhU"/>
                                 </connections>
                             </containerView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="vv7-cE-91X">
@@ -60,6 +60,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Search Collection" id="Bfa-jj-CDv"/>
                     <connections>
+                        <outlet property="containerView" destination="IUW-E9-5ao" id="ldq-g2-ZDS"/>
                         <outlet property="viewModel" destination="nUx-fs-PjS" id="drr-lP-ikV"/>
                     </connections>
                 </viewController>
@@ -68,11 +69,11 @@
             </objects>
             <point key="canvasLocation" x="180" y="-588"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Search Results Table View Controller-->
         <scene sceneID="btp-Rb-r7u">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S8f-9E-mcS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="iPo-O0-MdU" sceneMemberID="viewController">
+                <tableViewController id="iPo-O0-MdU" customClass="SearchResultsTableViewController" customModule="M_tG_Life" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="jaa-DO-rnp">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -115,7 +116,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GCP-fu-goV">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <connections>
-                                    <segue destination="iPo-O0-MdU" kind="embed" id="AOi-ee-T7C"/>
+                                    <segue destination="iPo-O0-MdU" kind="embed" identifier="AddCollectionContained" id="AOi-ee-T7C"/>
                                 </connections>
                             </containerView>
                         </subviews>

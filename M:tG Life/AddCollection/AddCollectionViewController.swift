@@ -9,11 +9,20 @@
 import UIKit
 
 class AddCollectionViewController: UIViewController, CoreDataConsumer {
+    let SEGUE_IDENTIFIER = "AddCollectionContained"
+
     @IBOutlet var viewModel: AddCollectionViewModel!
-    var _coreDataManager: CoreDataManager!
+    private var _coreDataManager: CoreDataManager!
 
     func setCoreDataManager(coreDataManager: CoreDataManager) {
+        viewModel.setCoreDataManager(coreDataManager)
         self._coreDataManager = coreDataManager
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == SEGUE_IDENTIFIER {
+            let destination = segue.destinationViewController as? SearchResultsTableViewController
+            destination?.setSearchResults(viewModel)
+        }
+    }
 }

@@ -7,7 +7,24 @@
 //
 
 import Foundation
+import CoreData
 
-class SearchCollectionViewModel : NSObject {
+class SearchCollectionViewModel : NSObject, CoreDataConsumer, CardSearchResultsProtocol {
+    private var results: NSFetchedResultsController!
 
+    func setCoreDataManager(coreDataManager: CoreDataManager) {
+
+    }
+
+    func numberOfSections() -> Int {
+        return 0
+    }
+
+    func numberOfObjectsInSection(section: Int) -> Int {
+        return 0
+    }
+
+    func objectAtIndexPath(indexPath: NSIndexPath) -> Card {
+        return Card()
+    }
 }
