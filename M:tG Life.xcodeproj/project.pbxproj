@@ -16,6 +16,8 @@
 		BE283CEE1C33611C00E71598 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE283CEC1C33611C00E71598 /* LaunchScreen.storyboard */; };
 		BE283CF91C33611C00E71598 /* M_tG_LifeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE283CF81C33611C00E71598 /* M_tG_LifeTests.m */; };
 		BE283D041C33611C00E71598 /* M_tG_LifeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE283D031C33611C00E71598 /* M_tG_LifeUITests.m */; };
+		BE283D121C33634700E71598 /* AllCards.json in Resources */ = {isa = PBXBuildFile; fileRef = BE283D111C33634700E71598 /* AllCards.json */; };
+		BE283D171C33651500E71598 /* ZPLCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE283D161C33651500E71598 /* ZPLCoreDataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		BE283CFF1C33611C00E71598 /* M:tG LifeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "M:tG LifeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE283D031C33611C00E71598 /* M_tG_LifeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M_tG_LifeUITests.m; sourceTree = "<group>"; };
 		BE283D051C33611C00E71598 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE283D111C33634700E71598 /* AllCards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AllCards.json; sourceTree = "<group>"; };
+		BE283D151C33651500E71598 /* ZPLCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPLCoreDataManager.h; sourceTree = "<group>"; };
+		BE283D161C33651500E71598 /* ZPLCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPLCoreDataManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +108,7 @@
 		BE283CDA1C33611C00E71598 /* M:tG Life */ = {
 			isa = PBXGroup;
 			children = (
+				BE283D141C3363F200E71598 /* Core Data */,
 				BE283CDE1C33611C00E71598 /* AppDelegate.h */,
 				BE283CDF1C33611C00E71598 /* AppDelegate.m */,
 				BE283CE11C33611C00E71598 /* ViewController.h */,
@@ -120,6 +126,7 @@
 		BE283CDB1C33611C00E71598 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BE283D111C33634700E71598 /* AllCards.json */,
 				BE283CDC1C33611C00E71598 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -142,6 +149,15 @@
 			);
 			path = "M:tG LifeUITests";
 			sourceTree = "<group>";
+		};
+		BE283D141C3363F200E71598 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				BE283D151C33651500E71598 /* ZPLCoreDataManager.h */,
+				BE283D161C33651500E71598 /* ZPLCoreDataManager.m */,
+			);
+			path = "Core Data";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -249,6 +265,7 @@
 				BE283CEE1C33611C00E71598 /* LaunchScreen.storyboard in Resources */,
 				BE283CEB1C33611C00E71598 /* Assets.xcassets in Resources */,
 				BE283CE61C33611C00E71598 /* Main.storyboard in Resources */,
+				BE283D121C33634700E71598 /* AllCards.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +294,7 @@
 				BE283CE31C33611C00E71598 /* ViewController.m in Sources */,
 				BE283CE01C33611C00E71598 /* AppDelegate.m in Sources */,
 				BE283CDD1C33611C00E71598 /* main.m in Sources */,
+				BE283D171C33651500E71598 /* ZPLCoreDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +520,7 @@
 				BE283D0A1C33611C00E71598 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE283D0B1C33611C00E71598 /* Build configuration list for PBXNativeTarget "M:tG LifeTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +529,7 @@
 				BE283D0D1C33611C00E71598 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE283D0E1C33611C00E71598 /* Build configuration list for PBXNativeTarget "M:tG LifeUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +538,7 @@
 				BE283D101C33611C00E71598 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

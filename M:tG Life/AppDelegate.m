@@ -7,15 +7,21 @@
 //
 
 #import "AppDelegate.h"
+#import "ZPLCoreDataManager.h"
 
 @interface AppDelegate ()
-
+@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
+@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property (readonly, strong, nonatomic) ZPLCoreDataManager *coreDataManager;
 @end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    id<ZPLCoreDataConsumer>rootViewController = (id<ZPLCoreDataConsumer>)[[self window] rootViewController];
+    [rootViewController setCoreDataManager:self.coreDataManager];
     // Override point for customization after application launch.
     return YES;
 }
@@ -49,6 +55,7 @@
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+@synthesize coreDataManager = _coreDataManager;
 
 - (NSURL *)applicationDocumentsDirectory {
     // The directory the application uses to store the Core Data store file. This code uses a directory named "com.zeropointlogic.M_tG_Life" in the application's documents directory.
@@ -107,6 +114,14 @@
     _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
     [_managedObjectContext setPersistentStoreCoordinator:coordinator];
     return _managedObjectContext;
+}
+
+- (ZPLCoreDataManager *)coreDataManager {
+    if (!_coreDataManager) {
+        return _coreDataManager;
+    }
+    _coreDataManager = [[ZPLCoreDataManager alloc] initWithManagedObjectContext:self.managedObjectContext];
+    return _coreDataManager;
 }
 
 #pragma mark - Core Data Saving support
