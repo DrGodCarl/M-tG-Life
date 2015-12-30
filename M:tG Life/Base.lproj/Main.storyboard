@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Decks-->
@@ -65,7 +66,7 @@
         <!--Collection-->
         <scene sceneID="teh-ov-eKq">
             <objects>
-                <viewController id="TvY-XX-C30" sceneMemberID="viewController">
+                <viewController id="TvY-XX-C30" customClass="ZPLCollectionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Mzj-0g-fLR"/>
                         <viewControllerLayoutGuide type="bottom" id="IdU-1S-UVE"/>
@@ -73,13 +74,62 @@
                     <view key="view" contentMode="scaleToFill" id="kqS-uP-L0G">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="MnZ-4z-b6H">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TAT-mg-kx0">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <connections>
+                                    <segue destination="wnN-TN-3u9" kind="embed" id="0kM-uQ-5Gc"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IdU-1S-UVE" firstAttribute="top" secondItem="TAT-mg-kx0" secondAttribute="bottom" id="8e6-5S-xwY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TAT-mg-kx0" secondAttribute="trailing" constant="-20" id="Ey9-qE-IAS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MnZ-4z-b6H" secondAttribute="trailing" constant="-20" id="HT1-iU-Bra"/>
+                            <constraint firstItem="MnZ-4z-b6H" firstAttribute="top" secondItem="Mzj-0g-fLR" secondAttribute="bottom" id="XYf-aC-M8t"/>
+                            <constraint firstItem="TAT-mg-kx0" firstAttribute="top" secondItem="MnZ-4z-b6H" secondAttribute="bottom" id="gGT-Qm-enN"/>
+                            <constraint firstItem="TAT-mg-kx0" firstAttribute="leading" secondItem="kqS-uP-L0G" secondAttribute="leadingMargin" constant="-20" id="gja-JI-xVh"/>
+                            <constraint firstItem="MnZ-4z-b6H" firstAttribute="leading" secondItem="kqS-uP-L0G" secondAttribute="leadingMargin" constant="-20" id="joz-IZ-cA4"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Collection" id="ZK6-aL-MTc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zkz-hN-B2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1402" y="247"/>
+        </scene>
+        <!--Cards Table View Controller-->
+        <scene sceneID="mwf-AF-eiX">
+            <objects>
+                <tableViewController id="wnN-TN-3u9" customClass="ZPLCardsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="OaG-9t-uD6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CardCell" id="lIl-eW-3XU">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lIl-eW-3XU" id="XAg-Kv-daZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wnN-TN-3u9" id="naW-fh-UKF"/>
+                            <outlet property="delegate" destination="wnN-TN-3u9" id="ovt-Lb-LLA"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ucy-74-KLu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2090" y="246.5"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="EL7-9j-IEo">
@@ -99,7 +149,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xbo-sN-YCB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="592" y="1272"/>
+            <point key="canvasLocation" x="610" y="1880"/>
         </scene>
     </scenes>
 </document>

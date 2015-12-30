@@ -1,20 +1,20 @@
 //
-//  ZPLMainTabBarController.m
+//  ZPLCollectionViewController.m
 //  M:tG Life
 //
 //  Created by Nick Wallin on 12/29/15.
 //  Copyright © 2015 Zero Point Logic. All rights reserved.
 //
 
-#import "ZPLMainTabBarController.h"
+#import "ZPLCollectionViewController.h"
 
-@interface ZPLMainTabBarController ()
+@interface ZPLCollectionViewController ()
 
 @property (nonatomic, weak) ZPLCoreDataManager* coreDataManager;
 
 @end
 
-@implementation ZPLMainTabBarController
+@implementation ZPLCollectionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,12 +26,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+/*
 #pragma mark - Navigation
 
+// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue destinationViewController] conformsToProtocol:@protocol(ZPLCoreDataConsumer)]) {
-        [[segue destinationViewController] setCoreDataManager:self.coreDataManager];
-    }
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
 }
+*/
 
 @end
