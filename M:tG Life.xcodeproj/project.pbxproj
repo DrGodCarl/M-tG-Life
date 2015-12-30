@@ -7,104 +7,70 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BE08842C1C06D1930077EA06 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE08842B1C06D1920077EA06 /* CoreDataManager.swift */; };
-		BE35A7EB1C039D2500AF6BA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE35A7EA1C039D2500AF6BA2 /* AppDelegate.swift */; };
-		BE35A7ED1C039D2500AF6BA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE35A7EC1C039D2500AF6BA2 /* ViewController.swift */; };
-		BE35A7F01C039D2500AF6BA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE35A7EE1C039D2500AF6BA2 /* Main.storyboard */; };
-		BE35A7F51C039D2500AF6BA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE35A7F41C039D2500AF6BA2 /* Assets.xcassets */; };
-		BE35A7F81C039D2500AF6BA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE35A7F61C039D2500AF6BA2 /* LaunchScreen.storyboard */; };
-		BE35A8031C039D2500AF6BA2 /* M_tG_LifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE35A8021C039D2500AF6BA2 /* M_tG_LifeTests.swift */; };
-		BE35A80E1C039D2500AF6BA2 /* M_tG_LifeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE35A80D1C039D2500AF6BA2 /* M_tG_LifeUITests.swift */; };
-		BE3C22511C06708600975A47 /* SearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3C22501C06708600975A47 /* SearchResultsTableViewController.swift */; };
-		BE3C22551C06782100975A47 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3C22541C06782100975A47 /* BaseTabBarController.swift */; };
-		BE50B1551C0903FF001D467C /* CardSearchResultsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50B1541C0903FF001D467C /* CardSearchResultsProtocol.swift */; };
-		BE50B1581C0915ED001D467C /* CardModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE50B1561C0915ED001D467C /* CardModel.xcdatamodeld */; };
-		BE50B1E01C091A47001D467C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50B1DF1C091A47001D467C /* Card.swift */; };
-		BE50B1E91C091DAC001D467C /* CDDeck+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50B1E11C091DAC001D467C /* CDDeck+CoreDataProperties.swift */; };
-		BE50B1EA1C091DAC001D467C /* CDDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50B1E21C091DAC001D467C /* CDDeck.swift */; };
-		BE50B1EB1C091DAC001D467C /* CDCardCount+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50B1E31C091DAC001D467C /* CDCardCount+CoreDataProperties.swift */; };
-		BE50B1EC1C091DAC001D467C /* CDCardCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50B1E41C091DAC001D467C /* CDCardCount.swift */; };
-		BE50B1ED1C091DAC001D467C /* CDCard+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50B1E51C091DAC001D467C /* CDCard+CoreDataProperties.swift */; };
-		BE50B1EE1C091DAC001D467C /* CDCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50B1E61C091DAC001D467C /* CDCard.swift */; };
-		BE50B1EF1C091DAC001D467C /* CDColor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50B1E71C091DAC001D467C /* CDColor+CoreDataProperties.swift */; };
-		BE50B1F01C091DAC001D467C /* CDColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50B1E81C091DAC001D467C /* CDColor.swift */; };
-		BE50B1F51C092A64001D467C /* AllCards.json in Resources */ = {isa = PBXBuildFile; fileRef = BE50B1F41C092A64001D467C /* AllCards.json */; };
-		BE50B1F71C092A8C001D467C /* CardSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50B1F61C092A8C001D467C /* CardSetup.swift */; };
-		BEC5CE9F1C06324C0061FDE5 /* SearchCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC5CE9D1C06324C0061FDE5 /* SearchCollectionViewController.swift */; };
-		BEC5CEA01C06324C0061FDE5 /* SearchCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC5CE9E1C06324C0061FDE5 /* SearchCollectionViewModel.swift */; };
-		BEC5CEA31C0632890061FDE5 /* AddCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC5CEA21C0632890061FDE5 /* AddCollectionViewController.swift */; };
-		BEC5CEA51C0632970061FDE5 /* AddCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC5CEA41C0632970061FDE5 /* AddCollectionViewModel.swift */; };
+		BE283CDD1C33611C00E71598 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE283CDC1C33611C00E71598 /* main.m */; };
+		BE283CE01C33611C00E71598 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE283CDF1C33611C00E71598 /* AppDelegate.m */; };
+		BE283CE31C33611C00E71598 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE283CE21C33611C00E71598 /* ViewController.m */; };
+		BE283CE61C33611C00E71598 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE283CE41C33611C00E71598 /* Main.storyboard */; };
+		BE283CE91C33611C00E71598 /* M_tG_Life.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE283CE71C33611C00E71598 /* M_tG_Life.xcdatamodeld */; };
+		BE283CEB1C33611C00E71598 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE283CEA1C33611C00E71598 /* Assets.xcassets */; };
+		BE283CEE1C33611C00E71598 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE283CEC1C33611C00E71598 /* LaunchScreen.storyboard */; };
+		BE283CF91C33611C00E71598 /* M_tG_LifeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE283CF81C33611C00E71598 /* M_tG_LifeTests.m */; };
+		BE283D041C33611C00E71598 /* M_tG_LifeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE283D031C33611C00E71598 /* M_tG_LifeUITests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BE35A7FF1C039D2500AF6BA2 /* PBXContainerItemProxy */ = {
+		BE283CF51C33611C00E71598 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BE35A7DF1C039D2500AF6BA2 /* Project object */;
+			containerPortal = BE283CD01C33611C00E71598 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BE35A7E61C039D2500AF6BA2;
+			remoteGlobalIDString = BE283CD71C33611C00E71598;
 			remoteInfo = "M:tG Life";
 		};
-		BE35A80A1C039D2500AF6BA2 /* PBXContainerItemProxy */ = {
+		BE283D001C33611C00E71598 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BE35A7DF1C039D2500AF6BA2 /* Project object */;
+			containerPortal = BE283CD01C33611C00E71598 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BE35A7E61C039D2500AF6BA2;
+			remoteGlobalIDString = BE283CD71C33611C00E71598;
 			remoteInfo = "M:tG Life";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BE08842B1C06D1920077EA06 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		BE35A7E71C039D2500AF6BA2 /* M:tG Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "M:tG Life.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE35A7EA1C039D2500AF6BA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BE35A7EC1C039D2500AF6BA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BE35A7EF1C039D2500AF6BA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BE35A7F41C039D2500AF6BA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BE35A7F71C039D2500AF6BA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BE35A7F91C039D2500AF6BA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BE35A7FE1C039D2500AF6BA2 /* M:tG LifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "M:tG LifeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE35A8021C039D2500AF6BA2 /* M_tG_LifeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M_tG_LifeTests.swift; sourceTree = "<group>"; };
-		BE35A8041C039D2500AF6BA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BE35A8091C039D2500AF6BA2 /* M:tG LifeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "M:tG LifeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE35A80D1C039D2500AF6BA2 /* M_tG_LifeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M_tG_LifeUITests.swift; sourceTree = "<group>"; };
-		BE35A80F1C039D2500AF6BA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BE3C22501C06708600975A47 /* SearchResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewController.swift; sourceTree = "<group>"; };
-		BE3C22541C06782100975A47 /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
-		BE50B1541C0903FF001D467C /* CardSearchResultsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSearchResultsProtocol.swift; sourceTree = "<group>"; };
-		BE50B1571C0915ED001D467C /* CardModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CardModel.xcdatamodel; sourceTree = "<group>"; };
-		BE50B1DF1C091A47001D467C /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		BE50B1E11C091DAC001D467C /* CDDeck+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDDeck+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BE50B1E21C091DAC001D467C /* CDDeck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDDeck.swift; sourceTree = "<group>"; };
-		BE50B1E31C091DAC001D467C /* CDCardCount+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDCardCount+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BE50B1E41C091DAC001D467C /* CDCardCount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDCardCount.swift; sourceTree = "<group>"; };
-		BE50B1E51C091DAC001D467C /* CDCard+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDCard+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BE50B1E61C091DAC001D467C /* CDCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDCard.swift; sourceTree = "<group>"; };
-		BE50B1E71C091DAC001D467C /* CDColor+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDColor+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BE50B1E81C091DAC001D467C /* CDColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDColor.swift; sourceTree = "<group>"; };
-		BE50B1F41C092A64001D467C /* AllCards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AllCards.json; sourceTree = "<group>"; };
-		BE50B1F61C092A8C001D467C /* CardSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSetup.swift; sourceTree = "<group>"; };
-		BEC5CE9D1C06324C0061FDE5 /* SearchCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewController.swift; sourceTree = "<group>"; };
-		BEC5CE9E1C06324C0061FDE5 /* SearchCollectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewModel.swift; sourceTree = "<group>"; };
-		BEC5CEA21C0632890061FDE5 /* AddCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCollectionViewController.swift; sourceTree = "<group>"; };
-		BEC5CEA41C0632970061FDE5 /* AddCollectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCollectionViewModel.swift; sourceTree = "<group>"; };
+		BE283CD81C33611C00E71598 /* M:tG Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "M:tG Life.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE283CDC1C33611C00E71598 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BE283CDE1C33611C00E71598 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BE283CDF1C33611C00E71598 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BE283CE11C33611C00E71598 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BE283CE21C33611C00E71598 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BE283CE51C33611C00E71598 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BE283CE81C33611C00E71598 /* M_tG_Life.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = M_tG_Life.xcdatamodel; sourceTree = "<group>"; };
+		BE283CEA1C33611C00E71598 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BE283CED1C33611C00E71598 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BE283CEF1C33611C00E71598 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE283CF41C33611C00E71598 /* M:tG LifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "M:tG LifeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE283CF81C33611C00E71598 /* M_tG_LifeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M_tG_LifeTests.m; sourceTree = "<group>"; };
+		BE283CFA1C33611C00E71598 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE283CFF1C33611C00E71598 /* M:tG LifeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "M:tG LifeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE283D031C33611C00E71598 /* M_tG_LifeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M_tG_LifeUITests.m; sourceTree = "<group>"; };
+		BE283D051C33611C00E71598 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BE35A7E41C039D2500AF6BA2 /* Frameworks */ = {
+		BE283CD51C33611C00E71598 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BE35A7FB1C039D2500AF6BA2 /* Frameworks */ = {
+		BE283CF11C33611C00E71598 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BE35A8061C039D2500AF6BA2 /* Frameworks */ = {
+		BE283CFC1C33611C00E71598 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -114,143 +80,79 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BE08842A1C06D1790077EA06 /* CoreData */ = {
+		BE283CCF1C33611C00E71598 = {
 			isa = PBXGroup;
 			children = (
-				BE08842B1C06D1920077EA06 /* CoreDataManager.swift */,
-				BE50B1561C0915ED001D467C /* CardModel.xcdatamodeld */,
-				BE50B1F31C092A64001D467C /* InitialSetup */,
-				BE50B1AB1C0916C2001D467C /* ManagedObjectSubclasses */,
-			);
-			path = CoreData;
-			sourceTree = "<group>";
-		};
-		BE35A7DE1C039D2500AF6BA2 = {
-			isa = PBXGroup;
-			children = (
-				BE35A7E91C039D2500AF6BA2 /* M:tG Life */,
-				BE35A8011C039D2500AF6BA2 /* M:tG LifeTests */,
-				BE35A80C1C039D2500AF6BA2 /* M:tG LifeUITests */,
-				BE35A7E81C039D2500AF6BA2 /* Products */,
+				BE283CDA1C33611C00E71598 /* M:tG Life */,
+				BE283CF71C33611C00E71598 /* M:tG LifeTests */,
+				BE283D021C33611C00E71598 /* M:tG LifeUITests */,
+				BE283CD91C33611C00E71598 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		BE35A7E81C039D2500AF6BA2 /* Products */ = {
+		BE283CD91C33611C00E71598 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BE35A7E71C039D2500AF6BA2 /* M:tG Life.app */,
-				BE35A7FE1C039D2500AF6BA2 /* M:tG LifeTests.xctest */,
-				BE35A8091C039D2500AF6BA2 /* M:tG LifeUITests.xctest */,
+				BE283CD81C33611C00E71598 /* M:tG Life.app */,
+				BE283CF41C33611C00E71598 /* M:tG LifeTests.xctest */,
+				BE283CFF1C33611C00E71598 /* M:tG LifeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BE35A7E91C039D2500AF6BA2 /* M:tG Life */ = {
+		BE283CDA1C33611C00E71598 /* M:tG Life */ = {
 			isa = PBXGroup;
 			children = (
-				BE50B1CC1C0918EC001D467C /* Model */,
-				BE08842A1C06D1790077EA06 /* CoreData */,
-				BE3C224F1C06705200975A47 /* SearchResults */,
-				BEC5CEA11C0632790061FDE5 /* AddCollection */,
-				BEC5CE9C1C06324C0061FDE5 /* SearchCollection */,
-				BE35A7EA1C039D2500AF6BA2 /* AppDelegate.swift */,
-				BE3C22541C06782100975A47 /* BaseTabBarController.swift */,
-				BE35A7EC1C039D2500AF6BA2 /* ViewController.swift */,
-				BE35A7EE1C039D2500AF6BA2 /* Main.storyboard */,
-				BE35A7F41C039D2500AF6BA2 /* Assets.xcassets */,
-				BE35A7F61C039D2500AF6BA2 /* LaunchScreen.storyboard */,
-				BE35A7F91C039D2500AF6BA2 /* Info.plist */,
+				BE283CDE1C33611C00E71598 /* AppDelegate.h */,
+				BE283CDF1C33611C00E71598 /* AppDelegate.m */,
+				BE283CE11C33611C00E71598 /* ViewController.h */,
+				BE283CE21C33611C00E71598 /* ViewController.m */,
+				BE283CE41C33611C00E71598 /* Main.storyboard */,
+				BE283CEA1C33611C00E71598 /* Assets.xcassets */,
+				BE283CEC1C33611C00E71598 /* LaunchScreen.storyboard */,
+				BE283CEF1C33611C00E71598 /* Info.plist */,
+				BE283CE71C33611C00E71598 /* M_tG_Life.xcdatamodeld */,
+				BE283CDB1C33611C00E71598 /* Supporting Files */,
 			);
 			path = "M:tG Life";
 			sourceTree = "<group>";
 		};
-		BE35A8011C039D2500AF6BA2 /* M:tG LifeTests */ = {
+		BE283CDB1C33611C00E71598 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BE35A8021C039D2500AF6BA2 /* M_tG_LifeTests.swift */,
-				BE35A8041C039D2500AF6BA2 /* Info.plist */,
+				BE283CDC1C33611C00E71598 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE283CF71C33611C00E71598 /* M:tG LifeTests */ = {
+			isa = PBXGroup;
+			children = (
+				BE283CF81C33611C00E71598 /* M_tG_LifeTests.m */,
+				BE283CFA1C33611C00E71598 /* Info.plist */,
 			);
 			path = "M:tG LifeTests";
 			sourceTree = "<group>";
 		};
-		BE35A80C1C039D2500AF6BA2 /* M:tG LifeUITests */ = {
+		BE283D021C33611C00E71598 /* M:tG LifeUITests */ = {
 			isa = PBXGroup;
 			children = (
-				BE35A80D1C039D2500AF6BA2 /* M_tG_LifeUITests.swift */,
-				BE35A80F1C039D2500AF6BA2 /* Info.plist */,
+				BE283D031C33611C00E71598 /* M_tG_LifeUITests.m */,
+				BE283D051C33611C00E71598 /* Info.plist */,
 			);
 			path = "M:tG LifeUITests";
-			sourceTree = "<group>";
-		};
-		BE3C224F1C06705200975A47 /* SearchResults */ = {
-			isa = PBXGroup;
-			children = (
-				BE3C22501C06708600975A47 /* SearchResultsTableViewController.swift */,
-				BE50B1541C0903FF001D467C /* CardSearchResultsProtocol.swift */,
-			);
-			path = SearchResults;
-			sourceTree = "<group>";
-		};
-		BE50B1AB1C0916C2001D467C /* ManagedObjectSubclasses */ = {
-			isa = PBXGroup;
-			children = (
-				BE50B1E11C091DAC001D467C /* CDDeck+CoreDataProperties.swift */,
-				BE50B1E21C091DAC001D467C /* CDDeck.swift */,
-				BE50B1E31C091DAC001D467C /* CDCardCount+CoreDataProperties.swift */,
-				BE50B1E41C091DAC001D467C /* CDCardCount.swift */,
-				BE50B1E51C091DAC001D467C /* CDCard+CoreDataProperties.swift */,
-				BE50B1E61C091DAC001D467C /* CDCard.swift */,
-				BE50B1E71C091DAC001D467C /* CDColor+CoreDataProperties.swift */,
-				BE50B1E81C091DAC001D467C /* CDColor.swift */,
-			);
-			path = ManagedObjectSubclasses;
-			sourceTree = "<group>";
-		};
-		BE50B1CC1C0918EC001D467C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				BE50B1DF1C091A47001D467C /* Card.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		BE50B1F31C092A64001D467C /* InitialSetup */ = {
-			isa = PBXGroup;
-			children = (
-				BE50B1F61C092A8C001D467C /* CardSetup.swift */,
-				BE50B1F41C092A64001D467C /* AllCards.json */,
-			);
-			path = InitialSetup;
-			sourceTree = "<group>";
-		};
-		BEC5CE9C1C06324C0061FDE5 /* SearchCollection */ = {
-			isa = PBXGroup;
-			children = (
-				BEC5CE9D1C06324C0061FDE5 /* SearchCollectionViewController.swift */,
-				BEC5CE9E1C06324C0061FDE5 /* SearchCollectionViewModel.swift */,
-			);
-			path = SearchCollection;
-			sourceTree = "<group>";
-		};
-		BEC5CEA11C0632790061FDE5 /* AddCollection */ = {
-			isa = PBXGroup;
-			children = (
-				BEC5CEA21C0632890061FDE5 /* AddCollectionViewController.swift */,
-				BEC5CEA41C0632970061FDE5 /* AddCollectionViewModel.swift */,
-			);
-			path = AddCollection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BE35A7E61C039D2500AF6BA2 /* M:tG Life */ = {
+		BE283CD71C33611C00E71598 /* M:tG Life */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BE35A8121C039D2500AF6BA2 /* Build configuration list for PBXNativeTarget "M:tG Life" */;
+			buildConfigurationList = BE283D081C33611C00E71598 /* Build configuration list for PBXNativeTarget "M:tG Life" */;
 			buildPhases = (
-				BE35A7E31C039D2500AF6BA2 /* Sources */,
-				BE35A7E41C039D2500AF6BA2 /* Frameworks */,
-				BE35A7E51C039D2500AF6BA2 /* Resources */,
+				BE283CD41C33611C00E71598 /* Sources */,
+				BE283CD51C33611C00E71598 /* Frameworks */,
+				BE283CD61C33611C00E71598 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -258,69 +160,68 @@
 			);
 			name = "M:tG Life";
 			productName = "M:tG Life";
-			productReference = BE35A7E71C039D2500AF6BA2 /* M:tG Life.app */;
+			productReference = BE283CD81C33611C00E71598 /* M:tG Life.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BE35A7FD1C039D2500AF6BA2 /* M:tG LifeTests */ = {
+		BE283CF31C33611C00E71598 /* M:tG LifeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BE35A8151C039D2500AF6BA2 /* Build configuration list for PBXNativeTarget "M:tG LifeTests" */;
+			buildConfigurationList = BE283D0B1C33611C00E71598 /* Build configuration list for PBXNativeTarget "M:tG LifeTests" */;
 			buildPhases = (
-				BE35A7FA1C039D2500AF6BA2 /* Sources */,
-				BE35A7FB1C039D2500AF6BA2 /* Frameworks */,
-				BE35A7FC1C039D2500AF6BA2 /* Resources */,
+				BE283CF01C33611C00E71598 /* Sources */,
+				BE283CF11C33611C00E71598 /* Frameworks */,
+				BE283CF21C33611C00E71598 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BE35A8001C039D2500AF6BA2 /* PBXTargetDependency */,
+				BE283CF61C33611C00E71598 /* PBXTargetDependency */,
 			);
 			name = "M:tG LifeTests";
 			productName = "M:tG LifeTests";
-			productReference = BE35A7FE1C039D2500AF6BA2 /* M:tG LifeTests.xctest */;
+			productReference = BE283CF41C33611C00E71598 /* M:tG LifeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BE35A8081C039D2500AF6BA2 /* M:tG LifeUITests */ = {
+		BE283CFE1C33611C00E71598 /* M:tG LifeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BE35A8181C039D2500AF6BA2 /* Build configuration list for PBXNativeTarget "M:tG LifeUITests" */;
+			buildConfigurationList = BE283D0E1C33611C00E71598 /* Build configuration list for PBXNativeTarget "M:tG LifeUITests" */;
 			buildPhases = (
-				BE35A8051C039D2500AF6BA2 /* Sources */,
-				BE35A8061C039D2500AF6BA2 /* Frameworks */,
-				BE35A8071C039D2500AF6BA2 /* Resources */,
+				BE283CFB1C33611C00E71598 /* Sources */,
+				BE283CFC1C33611C00E71598 /* Frameworks */,
+				BE283CFD1C33611C00E71598 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BE35A80B1C039D2500AF6BA2 /* PBXTargetDependency */,
+				BE283D011C33611C00E71598 /* PBXTargetDependency */,
 			);
 			name = "M:tG LifeUITests";
 			productName = "M:tG LifeUITests";
-			productReference = BE35A8091C039D2500AF6BA2 /* M:tG LifeUITests.xctest */;
+			productReference = BE283CFF1C33611C00E71598 /* M:tG LifeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		BE35A7DF1C039D2500AF6BA2 /* Project object */ = {
+		BE283CD01C33611C00E71598 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Zero Point Logic";
 				TargetAttributes = {
-					BE35A7E61C039D2500AF6BA2 = {
-						CreatedOnToolsVersion = 7.1.1;
+					BE283CD71C33611C00E71598 = {
+						CreatedOnToolsVersion = 7.2;
 					};
-					BE35A7FD1C039D2500AF6BA2 = {
-						CreatedOnToolsVersion = 7.1.1;
-						TestTargetID = BE35A7E61C039D2500AF6BA2;
+					BE283CF31C33611C00E71598 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = BE283CD71C33611C00E71598;
 					};
-					BE35A8081C039D2500AF6BA2 = {
-						CreatedOnToolsVersion = 7.1.1;
-						TestTargetID = BE35A7E61C039D2500AF6BA2;
+					BE283CFE1C33611C00E71598 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = BE283CD71C33611C00E71598;
 					};
 				};
 			};
-			buildConfigurationList = BE35A7E21C039D2500AF6BA2 /* Build configuration list for PBXProject "M:tG Life" */;
+			buildConfigurationList = BE283CD31C33611C00E71598 /* Build configuration list for PBXProject "M:tG Life" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -328,38 +229,37 @@
 				en,
 				Base,
 			);
-			mainGroup = BE35A7DE1C039D2500AF6BA2;
-			productRefGroup = BE35A7E81C039D2500AF6BA2 /* Products */;
+			mainGroup = BE283CCF1C33611C00E71598;
+			productRefGroup = BE283CD91C33611C00E71598 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BE35A7E61C039D2500AF6BA2 /* M:tG Life */,
-				BE35A7FD1C039D2500AF6BA2 /* M:tG LifeTests */,
-				BE35A8081C039D2500AF6BA2 /* M:tG LifeUITests */,
+				BE283CD71C33611C00E71598 /* M:tG Life */,
+				BE283CF31C33611C00E71598 /* M:tG LifeTests */,
+				BE283CFE1C33611C00E71598 /* M:tG LifeUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BE35A7E51C039D2500AF6BA2 /* Resources */ = {
+		BE283CD61C33611C00E71598 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE35A7F81C039D2500AF6BA2 /* LaunchScreen.storyboard in Resources */,
-				BE35A7F51C039D2500AF6BA2 /* Assets.xcassets in Resources */,
-				BE35A7F01C039D2500AF6BA2 /* Main.storyboard in Resources */,
-				BE50B1F51C092A64001D467C /* AllCards.json in Resources */,
+				BE283CEE1C33611C00E71598 /* LaunchScreen.storyboard in Resources */,
+				BE283CEB1C33611C00E71598 /* Assets.xcassets in Resources */,
+				BE283CE61C33611C00E71598 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BE35A7FC1C039D2500AF6BA2 /* Resources */ = {
+		BE283CF21C33611C00E71598 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BE35A8071C039D2500AF6BA2 /* Resources */ = {
+		BE283CFD1C33611C00E71598 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -369,78 +269,61 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BE35A7E31C039D2500AF6BA2 /* Sources */ = {
+		BE283CD41C33611C00E71598 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE3C22511C06708600975A47 /* SearchResultsTableViewController.swift in Sources */,
-				BEC5CEA51C0632970061FDE5 /* AddCollectionViewModel.swift in Sources */,
-				BE50B1F01C091DAC001D467C /* CDColor.swift in Sources */,
-				BE50B1E91C091DAC001D467C /* CDDeck+CoreDataProperties.swift in Sources */,
-				BE3C22551C06782100975A47 /* BaseTabBarController.swift in Sources */,
-				BE50B1EE1C091DAC001D467C /* CDCard.swift in Sources */,
-				BEC5CE9F1C06324C0061FDE5 /* SearchCollectionViewController.swift in Sources */,
-				BE50B1ED1C091DAC001D467C /* CDCard+CoreDataProperties.swift in Sources */,
-				BE50B1EF1C091DAC001D467C /* CDColor+CoreDataProperties.swift in Sources */,
-				BE50B1E01C091A47001D467C /* Card.swift in Sources */,
-				BE50B1EC1C091DAC001D467C /* CDCardCount.swift in Sources */,
-				BE50B1EB1C091DAC001D467C /* CDCardCount+CoreDataProperties.swift in Sources */,
-				BE35A7ED1C039D2500AF6BA2 /* ViewController.swift in Sources */,
-				BE50B1551C0903FF001D467C /* CardSearchResultsProtocol.swift in Sources */,
-				BE50B1581C0915ED001D467C /* CardModel.xcdatamodeld in Sources */,
-				BEC5CEA01C06324C0061FDE5 /* SearchCollectionViewModel.swift in Sources */,
-				BEC5CEA31C0632890061FDE5 /* AddCollectionViewController.swift in Sources */,
-				BE50B1EA1C091DAC001D467C /* CDDeck.swift in Sources */,
-				BE50B1F71C092A8C001D467C /* CardSetup.swift in Sources */,
-				BE08842C1C06D1930077EA06 /* CoreDataManager.swift in Sources */,
-				BE35A7EB1C039D2500AF6BA2 /* AppDelegate.swift in Sources */,
+				BE283CE91C33611C00E71598 /* M_tG_Life.xcdatamodeld in Sources */,
+				BE283CE31C33611C00E71598 /* ViewController.m in Sources */,
+				BE283CE01C33611C00E71598 /* AppDelegate.m in Sources */,
+				BE283CDD1C33611C00E71598 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BE35A7FA1C039D2500AF6BA2 /* Sources */ = {
+		BE283CF01C33611C00E71598 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE35A8031C039D2500AF6BA2 /* M_tG_LifeTests.swift in Sources */,
+				BE283CF91C33611C00E71598 /* M_tG_LifeTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BE35A8051C039D2500AF6BA2 /* Sources */ = {
+		BE283CFB1C33611C00E71598 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE35A80E1C039D2500AF6BA2 /* M_tG_LifeUITests.swift in Sources */,
+				BE283D041C33611C00E71598 /* M_tG_LifeUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BE35A8001C039D2500AF6BA2 /* PBXTargetDependency */ = {
+		BE283CF61C33611C00E71598 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BE35A7E61C039D2500AF6BA2 /* M:tG Life */;
-			targetProxy = BE35A7FF1C039D2500AF6BA2 /* PBXContainerItemProxy */;
+			target = BE283CD71C33611C00E71598 /* M:tG Life */;
+			targetProxy = BE283CF51C33611C00E71598 /* PBXContainerItemProxy */;
 		};
-		BE35A80B1C039D2500AF6BA2 /* PBXTargetDependency */ = {
+		BE283D011C33611C00E71598 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BE35A7E61C039D2500AF6BA2 /* M:tG Life */;
-			targetProxy = BE35A80A1C039D2500AF6BA2 /* PBXContainerItemProxy */;
+			target = BE283CD71C33611C00E71598 /* M:tG Life */;
+			targetProxy = BE283D001C33611C00E71598 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BE35A7EE1C039D2500AF6BA2 /* Main.storyboard */ = {
+		BE283CE41C33611C00E71598 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BE35A7EF1C039D2500AF6BA2 /* Base */,
+				BE283CE51C33611C00E71598 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		BE35A7F61C039D2500AF6BA2 /* LaunchScreen.storyboard */ = {
+		BE283CEC1C33611C00E71598 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BE35A7F71C039D2500AF6BA2 /* Base */,
+				BE283CED1C33611C00E71598 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -448,7 +331,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		BE35A8101C039D2500AF6BA2 /* Debug */ = {
+		BE283D061C33611C00E71598 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -484,16 +367,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		BE35A8111C039D2500AF6BA2 /* Release */ = {
+		BE283D071C33611C00E71598 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -523,7 +405,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -531,34 +413,29 @@
 			};
 			name = Release;
 		};
-		BE35A8131C039D2500AF6BA2 /* Debug */ = {
+		BE283D091C33611C00E71598 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "M:tG Life/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zeropointlogic.M-tG-Life";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "M:tG Life/CoreData/M:tG Life-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		BE35A8141C039D2500AF6BA2 /* Release */ = {
+		BE283D0A1C33611C00E71598 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "M:tG Life/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zeropointlogic.M-tG-Life";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "M:tG Life/CoreData/M:tG Life-Bridging-Header.h";
 			};
 			name = Release;
 		};
-		BE35A8161C039D2500AF6BA2 /* Debug */ = {
+		BE283D0C1C33611C00E71598 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -570,7 +447,7 @@
 			};
 			name = Debug;
 		};
-		BE35A8171C039D2500AF6BA2 /* Release */ = {
+		BE283D0D1C33611C00E71598 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -582,7 +459,7 @@
 			};
 			name = Release;
 		};
-		BE35A8191C039D2500AF6BA2 /* Debug */ = {
+		BE283D0F1C33611C00E71598 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = "M:tG LifeUITests/Info.plist";
@@ -594,7 +471,7 @@
 			};
 			name = Debug;
 		};
-		BE35A81A1C039D2500AF6BA2 /* Release */ = {
+		BE283D101C33611C00E71598 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = "M:tG LifeUITests/Info.plist";
@@ -609,56 +486,53 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BE35A7E21C039D2500AF6BA2 /* Build configuration list for PBXProject "M:tG Life" */ = {
+		BE283CD31C33611C00E71598 /* Build configuration list for PBXProject "M:tG Life" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BE35A8101C039D2500AF6BA2 /* Debug */,
-				BE35A8111C039D2500AF6BA2 /* Release */,
+				BE283D061C33611C00E71598 /* Debug */,
+				BE283D071C33611C00E71598 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BE35A8121C039D2500AF6BA2 /* Build configuration list for PBXNativeTarget "M:tG Life" */ = {
+		BE283D081C33611C00E71598 /* Build configuration list for PBXNativeTarget "M:tG Life" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BE35A8131C039D2500AF6BA2 /* Debug */,
-				BE35A8141C039D2500AF6BA2 /* Release */,
+				BE283D091C33611C00E71598 /* Debug */,
+				BE283D0A1C33611C00E71598 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		BE35A8151C039D2500AF6BA2 /* Build configuration list for PBXNativeTarget "M:tG LifeTests" */ = {
+		BE283D0B1C33611C00E71598 /* Build configuration list for PBXNativeTarget "M:tG LifeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BE35A8161C039D2500AF6BA2 /* Debug */,
-				BE35A8171C039D2500AF6BA2 /* Release */,
+				BE283D0C1C33611C00E71598 /* Debug */,
+				BE283D0D1C33611C00E71598 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		BE35A8181C039D2500AF6BA2 /* Build configuration list for PBXNativeTarget "M:tG LifeUITests" */ = {
+		BE283D0E1C33611C00E71598 /* Build configuration list for PBXNativeTarget "M:tG LifeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BE35A8191C039D2500AF6BA2 /* Debug */,
-				BE35A81A1C039D2500AF6BA2 /* Release */,
+				BE283D0F1C33611C00E71598 /* Debug */,
+				BE283D101C33611C00E71598 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		BE50B1561C0915ED001D467C /* CardModel.xcdatamodeld */ = {
+		BE283CE71C33611C00E71598 /* M_tG_Life.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				BE50B1571C0915ED001D467C /* CardModel.xcdatamodel */,
+				BE283CE81C33611C00E71598 /* M_tG_Life.xcdatamodel */,
 			);
-			currentVersion = BE50B1571C0915ED001D467C /* CardModel.xcdatamodel */;
-			path = CardModel.xcdatamodeld;
+			currentVersion = BE283CE81C33611C00E71598 /* M_tG_Life.xcdatamodel */;
+			path = M_tG_Life.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = BE35A7DF1C039D2500AF6BA2 /* Project object */;
+	rootObject = BE283CD01C33611C00E71598 /* Project object */;
 }
