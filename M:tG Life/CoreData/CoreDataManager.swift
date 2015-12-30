@@ -15,13 +15,14 @@ protocol CoreDataConsumer {
 
 class CoreDataManager: NSObject {
     var managedObjectContext: NSManagedObjectContext!
+    var colorCache = [String: CDColor]()
 
     init(managedObjectContext: NSManagedObjectContext) {
         self.managedObjectContext = managedObjectContext
         super.init()
     }
 
-    func saveContext () {
+    func saveContext() {
         if managedObjectContext.hasChanges {
             do {
                 try managedObjectContext.save()
@@ -33,5 +34,27 @@ class CoreDataManager: NSObject {
                 abort()
             }
         }
+    }
+
+    func colorForName(name: String) throws -> CDColor? {
+        if let cachedValue = colorCache[name] {
+            return cachedValue
+        }
+        let fetchRequest = NSFetchRequest(entityName: NSStringFromClass(CDColor))
+        fetchRequest.predicate = NSPredicate(format: "name == %@", name)
+        if let fetchResults = try managedObjectContext!.executeFetchRequest(fetchRequest) as? [CDColor] {
+            let result = fetchResults[0]
+            colorCache[name] = result
+            return result
+        }
+        return nil
+    }
+
+    func createNewColor() -> CDColor {
+        return NSEntityDescription.insertNewObjectForEntityForName(NSStringFromClass(CDColor), inManagedObjectContext: managedObjectContext) as! CDColor
+    }
+
+    func createNewCard() -> CDCard {
+        return NSEntityDescription.insertNewObjectForEntityForName(NSStringFromClass(CDCard), inManagedObjectContext: managedObjectContext) as! CDCard
     }
 }

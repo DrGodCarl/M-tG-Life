@@ -18,6 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         let rootViewController = self.window!.rootViewController as! BaseTabBarController
         rootViewController.setCoreDataManager(self.coreDataManager)
+        /**
+        This, for the moment, is just for populating the initial database. To get all of the json data, download AllCards.json from:
+        http://mtgjson.com/json/AllCards.json.zip
+        Unzip it and put it in:
+        $PROJECT_ROOT/M:tG Life/CoreData/InitialSetup
+        */
+//        CardSetup.insertInitialDataIntoCoreData(self.coreDataManager)
         return true
     }
 

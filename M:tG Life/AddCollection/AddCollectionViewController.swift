@@ -9,7 +9,7 @@
 import UIKit
 
 class AddCollectionViewController: UIViewController, CoreDataConsumer {
-    let SEGUE_IDENTIFIER = "AddCollectionContained"
+    private let SEGUE_IDENTIFIER = "AddCollectionContained"
 
     @IBOutlet var viewModel: AddCollectionViewModel!
     private var _coreDataManager: CoreDataManager!

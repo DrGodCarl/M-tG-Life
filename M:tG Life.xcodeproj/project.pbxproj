@@ -28,6 +28,8 @@
 		BE50B1EE1C091DAC001D467C /* CDCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50B1E61C091DAC001D467C /* CDCard.swift */; };
 		BE50B1EF1C091DAC001D467C /* CDColor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50B1E71C091DAC001D467C /* CDColor+CoreDataProperties.swift */; };
 		BE50B1F01C091DAC001D467C /* CDColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50B1E81C091DAC001D467C /* CDColor.swift */; };
+		BE50B1F51C092A64001D467C /* AllCards.json in Resources */ = {isa = PBXBuildFile; fileRef = BE50B1F41C092A64001D467C /* AllCards.json */; };
+		BE50B1F71C092A8C001D467C /* CardSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50B1F61C092A8C001D467C /* CardSetup.swift */; };
 		BEC5CE9F1C06324C0061FDE5 /* SearchCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC5CE9D1C06324C0061FDE5 /* SearchCollectionViewController.swift */; };
 		BEC5CEA01C06324C0061FDE5 /* SearchCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC5CE9E1C06324C0061FDE5 /* SearchCollectionViewModel.swift */; };
 		BEC5CEA31C0632890061FDE5 /* AddCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC5CEA21C0632890061FDE5 /* AddCollectionViewController.swift */; };
@@ -79,6 +81,8 @@
 		BE50B1E61C091DAC001D467C /* CDCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDCard.swift; sourceTree = "<group>"; };
 		BE50B1E71C091DAC001D467C /* CDColor+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDColor+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BE50B1E81C091DAC001D467C /* CDColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDColor.swift; sourceTree = "<group>"; };
+		BE50B1F41C092A64001D467C /* AllCards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AllCards.json; sourceTree = "<group>"; };
+		BE50B1F61C092A8C001D467C /* CardSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSetup.swift; sourceTree = "<group>"; };
 		BEC5CE9D1C06324C0061FDE5 /* SearchCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewController.swift; sourceTree = "<group>"; };
 		BEC5CE9E1C06324C0061FDE5 /* SearchCollectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewModel.swift; sourceTree = "<group>"; };
 		BEC5CEA21C0632890061FDE5 /* AddCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCollectionViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +119,7 @@
 			children = (
 				BE08842B1C06D1920077EA06 /* CoreDataManager.swift */,
 				BE50B1561C0915ED001D467C /* CardModel.xcdatamodeld */,
+				BE50B1F31C092A64001D467C /* InitialSetup */,
 				BE50B1AB1C0916C2001D467C /* ManagedObjectSubclasses */,
 			);
 			path = CoreData;
@@ -207,6 +212,15 @@
 				BE50B1DF1C091A47001D467C /* Card.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BE50B1F31C092A64001D467C /* InitialSetup */ = {
+			isa = PBXGroup;
+			children = (
+				BE50B1F61C092A8C001D467C /* CardSetup.swift */,
+				BE50B1F41C092A64001D467C /* AllCards.json */,
+			);
+			path = InitialSetup;
 			sourceTree = "<group>";
 		};
 		BEC5CE9C1C06324C0061FDE5 /* SearchCollection */ = {
@@ -334,6 +348,7 @@
 				BE35A7F81C039D2500AF6BA2 /* LaunchScreen.storyboard in Resources */,
 				BE35A7F51C039D2500AF6BA2 /* Assets.xcassets in Resources */,
 				BE35A7F01C039D2500AF6BA2 /* Main.storyboard in Resources */,
+				BE50B1F51C092A64001D467C /* AllCards.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +391,7 @@
 				BEC5CEA01C06324C0061FDE5 /* SearchCollectionViewModel.swift in Sources */,
 				BEC5CEA31C0632890061FDE5 /* AddCollectionViewController.swift in Sources */,
 				BE50B1EA1C091DAC001D467C /* CDDeck.swift in Sources */,
+				BE50B1F71C092A8C001D467C /* CardSetup.swift in Sources */,
 				BE08842C1C06D1930077EA06 /* CoreDataManager.swift in Sources */,
 				BE35A7EB1C039D2500AF6BA2 /* AppDelegate.swift in Sources */,
 			);

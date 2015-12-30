@@ -8,7 +8,7 @@
 import UIKit
 
 class SearchCollectionViewController: UIViewController, UISearchBarDelegate, CoreDataConsumer {
-    let SEGUE_IDENTIFIER = "SearchCollectionContained"
+    private let SEGUE_IDENTIFIER = "SearchCollectionContained"
 
     @IBOutlet var viewModel: SearchCollectionViewModel!
     @IBOutlet weak var containerView: UIView!
