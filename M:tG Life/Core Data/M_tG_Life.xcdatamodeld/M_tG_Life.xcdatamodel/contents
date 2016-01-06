@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="14F1021" minimumToolsVersion="Automatic">
-    <entity name="MTGCard" syncable="YES">
-        <relationship name="manaCost" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MTGManaCost" inverseName="cards" inverseEntity="MTGManaCost" syncable="YES"/>
-        <relationship name="sets" toMany="YES" deletionRule="Nullify" destinationEntity="MTGSet" inverseName="cards" inverseEntity="MTGSet" syncable="YES"/>
+    <entity name="MTGCard" representedClassName="MTGCard" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="colors" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MTGColor" inverseName="cards" inverseEntity="MTGColor" syncable="YES"/>
     </entity>
     <entity name="MTGCardCount" syncable="YES"/>
-    <entity name="MTGColor" syncable="YES"/>
+    <entity name="MTGColor" representedClassName="MTGColor" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cards" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MTGCard" inverseName="colors" inverseEntity="MTGCard" syncable="YES"/>
+    </entity>
     <entity name="MTGDeck" syncable="YES"/>
     <entity name="MTGManaCost" syncable="YES">
         <attribute name="blackCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -15,7 +18,6 @@
         <attribute name="greenCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="redCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="whiteCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <relationship name="cards" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MTGCard" inverseName="manaCost" inverseEntity="MTGCard" syncable="YES"/>
     </entity>
     <entity name="MTGSet" syncable="YES">
         <attribute name="border" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -23,14 +25,13 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="releaseDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <relationship name="cards" toMany="YES" deletionRule="Nullify" destinationEntity="MTGCard" inverseName="sets" inverseEntity="MTGCard" syncable="YES"/>
     </entity>
     <elements>
-        <element name="MTGColor" positionX="-63" positionY="-18" width="128" height="45"/>
-        <element name="MTGCardCount" positionX="-54" positionY="-9" width="128" height="45"/>
         <element name="MTGCard" positionX="-36" positionY="9" width="128" height="75"/>
+        <element name="MTGCardCount" positionX="-54" positionY="-9" width="128" height="45"/>
+        <element name="MTGColor" positionX="-63" positionY="-18" width="128" height="75"/>
         <element name="MTGDeck" positionX="-18" positionY="27" width="128" height="45"/>
-        <element name="MTGManaCost" positionX="0" positionY="45" width="128" height="165"/>
-        <element name="MTGSet" positionX="18" positionY="126" width="128" height="135"/>
+        <element name="MTGManaCost" positionX="0" positionY="45" width="128" height="150"/>
+        <element name="MTGSet" positionX="18" positionY="126" width="128" height="120"/>
     </elements>
 </model>

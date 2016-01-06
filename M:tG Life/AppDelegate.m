@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ZPLCoreDataManager.h"
+#import "ZPLCardSetup.h"
 
 @interface AppDelegate ()
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
@@ -23,6 +24,7 @@
     id<ZPLCoreDataConsumer>rootViewController = (id<ZPLCoreDataConsumer>)[[self window] rootViewController];
     [rootViewController ingestCoreDataManager:self.coreDataManager];
     // Override point for customization after application launch.
+    [ZPLCardSetup insertInitialDataIntoCoreData:self.coreDataManager];
     return YES;
 }
 
@@ -117,7 +119,7 @@
 }
 
 - (ZPLCoreDataManager *)coreDataManager {
-    if (!_coreDataManager) {
+    if (_coreDataManager) {
         return _coreDataManager;
     }
     _coreDataManager = [[ZPLCoreDataManager alloc] initWithManagedObjectContext:self.managedObjectContext];

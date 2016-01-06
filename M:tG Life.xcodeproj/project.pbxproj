@@ -18,6 +18,10 @@
 		BE283D1F1C336C5E00E71598 /* ZPLCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE283D1E1C336C5E00E71598 /* ZPLCoreDataManager.m */; };
 		BE283D221C336C8900E71598 /* M_tG_Life.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE283D201C336C8900E71598 /* M_tG_Life.xcdatamodeld */; };
 		BE283D261C336CF100E71598 /* ZPLCardSetup.m in Sources */ = {isa = PBXBuildFile; fileRef = BE283D251C336CF100E71598 /* ZPLCardSetup.m */; };
+		BEC15EDF1C3CAC4100F160B3 /* MTGColor+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC15ED81C3CAC4100F160B3 /* MTGColor+CoreDataProperties.m */; };
+		BEC15EE01C3CAC4100F160B3 /* MTGColor.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC15EDA1C3CAC4100F160B3 /* MTGColor.m */; };
+		BEC15EE11C3CAC4100F160B3 /* MTGCard+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC15EDC1C3CAC4100F160B3 /* MTGCard+CoreDataProperties.m */; };
+		BEC15EE21C3CAC4100F160B3 /* MTGCard.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC15EDE1C3CAC4100F160B3 /* MTGCard.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,15 @@
 		BE283D211C336C8900E71598 /* M_tG_Life.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = M_tG_Life.xcdatamodel; sourceTree = "<group>"; };
 		BE283D241C336CF100E71598 /* ZPLCardSetup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPLCardSetup.h; sourceTree = "<group>"; };
 		BE283D251C336CF100E71598 /* ZPLCardSetup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPLCardSetup.m; sourceTree = "<group>"; };
+		BEC15ED61C3CA89F00F160B3 /* ZPLCardProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPLCardProtocol.h; sourceTree = "<group>"; };
+		BEC15ED71C3CAC4100F160B3 /* MTGColor+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTGColor+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BEC15ED81C3CAC4100F160B3 /* MTGColor+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTGColor+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BEC15ED91C3CAC4100F160B3 /* MTGColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTGColor.h; sourceTree = "<group>"; };
+		BEC15EDA1C3CAC4100F160B3 /* MTGColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTGColor.m; sourceTree = "<group>"; };
+		BEC15EDB1C3CAC4100F160B3 /* MTGCard+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTGCard+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BEC15EDC1C3CAC4100F160B3 /* MTGCard+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTGCard+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BEC15EDD1C3CAC4100F160B3 /* MTGCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTGCard.h; sourceTree = "<group>"; };
+		BEC15EDE1C3CAC4100F160B3 /* MTGCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTGCard.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +122,7 @@
 		BE283CDA1C33611C00E71598 /* M:tG Life */ = {
 			isa = PBXGroup;
 			children = (
+				BEC15ED51C3CA5D300F160B3 /* Model */,
 				BE283D1B1C336C5E00E71598 /* Core Data */,
 				BE283CDE1C33611C00E71598 /* AppDelegate.h */,
 				BE283CDF1C33611C00E71598 /* AppDelegate.m */,
@@ -164,6 +178,14 @@
 		BE283D1C1C336C5E00E71598 /* Core Data Models */ = {
 			isa = PBXGroup;
 			children = (
+				BEC15ED71C3CAC4100F160B3 /* MTGColor+CoreDataProperties.h */,
+				BEC15ED81C3CAC4100F160B3 /* MTGColor+CoreDataProperties.m */,
+				BEC15ED91C3CAC4100F160B3 /* MTGColor.h */,
+				BEC15EDA1C3CAC4100F160B3 /* MTGColor.m */,
+				BEC15EDB1C3CAC4100F160B3 /* MTGCard+CoreDataProperties.h */,
+				BEC15EDC1C3CAC4100F160B3 /* MTGCard+CoreDataProperties.m */,
+				BEC15EDD1C3CAC4100F160B3 /* MTGCard.h */,
+				BEC15EDE1C3CAC4100F160B3 /* MTGCard.m */,
 			);
 			path = "Core Data Models";
 			sourceTree = "<group>";
@@ -175,6 +197,15 @@
 				BE283D251C336CF100E71598 /* ZPLCardSetup.m */,
 			);
 			path = Setup;
+			sourceTree = "<group>";
+		};
+		BEC15ED51C3CA5D300F160B3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BEC15ED61C3CA89F00F160B3 /* ZPLCardProtocol.h */,
+			);
+			name = Model;
+			path = ../../Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,9 +339,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE283D261C336CF100E71598 /* ZPLCardSetup.m in Sources */,
+				BEC15EE11C3CAC4100F160B3 /* MTGCard+CoreDataProperties.m in Sources */,
 				BE283CE31C33611C00E71598 /* ViewController.m in Sources */,
 				BE283D221C336C8900E71598 /* M_tG_Life.xcdatamodeld in Sources */,
+				BEC15EE21C3CAC4100F160B3 /* MTGCard.m in Sources */,
 				BE283CE01C33611C00E71598 /* AppDelegate.m in Sources */,
+				BEC15EE01C3CAC4100F160B3 /* MTGColor.m in Sources */,
+				BEC15EDF1C3CAC4100F160B3 /* MTGColor+CoreDataProperties.m in Sources */,
 				BE283D1F1C336C5E00E71598 /* ZPLCoreDataManager.m in Sources */,
 				BE283CDD1C33611C00E71598 /* main.m in Sources */,
 			);
