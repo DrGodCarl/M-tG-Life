@@ -11,12 +11,18 @@
 
 #import "ZPLCoreDataManager.h"
 
+@class ZPLManagedObjectWrapper;
+typedef ZPLManagedObjectWrapper * _Nonnull(^WrapperCreationBlock)(__kindof NSManagedObject * _Nonnull ,  ZPLCoreDataManager * _Nonnull);
+
 @interface ZPLManagedObjectWrapper : NSObject
 
-@property (strong, nonatomic, readonly) __kindof NSManagedObject *__nonnull object;
-@property (strong, nonatomic, readonly) ZPLCoreDataManager *__nonnull coreDataManager;
++ (WrapperCreationBlock _Nonnull)creationBlock;
 
-- (__nonnull instancetype)initWithManagedObject:(NSManagedObject * __nonnull)managedObject
-                                coreDataManager:(ZPLCoreDataManager * __nonnull)coreDataManager;
+@property (strong, nonatomic, readonly) __kindof NSManagedObject *_Nonnull object;
+@property (strong, nonatomic, readonly) ZPLCoreDataManager *_Nonnull coreDataManager;
+
+- (_Nonnull instancetype)initWithManagedObject:(NSManagedObject * _Nonnull)managedObject
+                                coreDataManager:(ZPLCoreDataManager * _Nonnull)coreDataManager;
+
 
 @end

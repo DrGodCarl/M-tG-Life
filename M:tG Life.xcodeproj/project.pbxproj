@@ -25,7 +25,7 @@
 		BEC15EE91C3CBACE00F160B3 /* ZPLCardWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC15EE81C3CBACE00F160B3 /* ZPLCardWrapper.m */; };
 		BEC15EEC1C3CBADE00F160B3 /* ZPLColorWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC15EEB1C3CBADE00F160B3 /* ZPLColorWrapper.m */; };
 		BEC15EEF1C3CBCB700F160B3 /* ZPLManagedObjectWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC15EEE1C3CBCB700F160B3 /* ZPLManagedObjectWrapper.m */; };
-		BEC15EF51C3CC85300F160B3 /* ZPLManagedResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC15EF41C3CC85300F160B3 /* ZPLManagedResultsController.m */; };
+		BEC15EF51C3CC85300F160B3 /* ZPLFetchedResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC15EF41C3CC85300F160B3 /* ZPLFetchedResultsController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,8 +83,8 @@
 		BEC15EEB1C3CBADE00F160B3 /* ZPLColorWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPLColorWrapper.m; sourceTree = "<group>"; };
 		BEC15EED1C3CBCB700F160B3 /* ZPLManagedObjectWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPLManagedObjectWrapper.h; sourceTree = "<group>"; };
 		BEC15EEE1C3CBCB700F160B3 /* ZPLManagedObjectWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPLManagedObjectWrapper.m; sourceTree = "<group>"; };
-		BEC15EF31C3CC85300F160B3 /* ZPLManagedResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPLManagedResultsController.h; sourceTree = "<group>"; };
-		BEC15EF41C3CC85300F160B3 /* ZPLManagedResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPLManagedResultsController.m; sourceTree = "<group>"; };
+		BEC15EF31C3CC85300F160B3 /* ZPLFetchedResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPLFetchedResultsController.h; sourceTree = "<group>"; };
+		BEC15EF41C3CC85300F160B3 /* ZPLFetchedResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPLFetchedResultsController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,8 +181,8 @@
 			children = (
 				BE283D1D1C336C5E00E71598 /* ZPLCoreDataManager.h */,
 				BE283D1E1C336C5E00E71598 /* ZPLCoreDataManager.m */,
-				BEC15EF31C3CC85300F160B3 /* ZPLManagedResultsController.h */,
-				BEC15EF41C3CC85300F160B3 /* ZPLManagedResultsController.m */,
+				BEC15EF31C3CC85300F160B3 /* ZPLFetchedResultsController.h */,
+				BEC15EF41C3CC85300F160B3 /* ZPLFetchedResultsController.m */,
 				BEC15EE61C3CBA8D00F160B3 /* Model Wrappers */,
 				BE283D231C336CC100E71598 /* Setup */,
 				BE283D201C336C8900E71598 /* M_tG_Life.xcdatamodeld */,
@@ -373,7 +373,7 @@
 				BE283CE31C33611C00E71598 /* ViewController.m in Sources */,
 				BE283D221C336C8900E71598 /* M_tG_Life.xcdatamodeld in Sources */,
 				BEC15EE21C3CAC4100F160B3 /* MTGCard.m in Sources */,
-				BEC15EF51C3CC85300F160B3 /* ZPLManagedResultsController.m in Sources */,
+				BEC15EF51C3CC85300F160B3 /* ZPLFetchedResultsController.m in Sources */,
 				BE283CE01C33611C00E71598 /* AppDelegate.m in Sources */,
 				BEC15EEC1C3CBADE00F160B3 /* ZPLColorWrapper.m in Sources */,
 				BEC15EE01C3CAC4100F160B3 /* MTGColor.m in Sources */,

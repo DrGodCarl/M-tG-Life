@@ -31,7 +31,7 @@
     return self.card.name;
 }
 
-- (NSSet<id<ZPLCardProtocol>> *)getColors {
+- (NSSet<id<ZPLColorProtocol>> *)getColors {
     NSMutableSet *colors = [[NSMutableSet alloc] initWithCapacity:[self.card.colors count]];
     [self.card.colors enumerateObjectsUsingBlock:^(MTGColor * _Nonnull obj, BOOL * _Nonnull stop) {
         [colors addObject:[[ZPLColorWrapper alloc] initWithManagedObject:obj

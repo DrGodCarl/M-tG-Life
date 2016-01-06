@@ -19,4 +19,11 @@
     return self;
 }
 
++ (WrapperCreationBlock)creationBlock {
+    return ^__kindof ZPLManagedObjectWrapper *(__kindof NSManagedObject *manObj, ZPLCoreDataManager *coreDataManager) {
+        return [[self alloc] initWithManagedObject:manObj
+                                   coreDataManager:coreDataManager];
+    };
+}
+
 @end

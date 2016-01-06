@@ -13,6 +13,7 @@
 
 #import "ZPLCardWrapper.h"
 #import "ZPLColorWrapper.h"
+#import "ZPLFetchedResultsController.h"
 
 @interface ZPLCoreDataManager()
 
@@ -67,6 +68,26 @@
     }
     return [[ZPLCardWrapper alloc] initWithManagedObject:card
                                          coreDataManager:self];
+}
+
+- (ZPLFetchedResultsController<ZPLCardWrapper *> *)fetchAllCards {
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:NSStringFromClass(MTGCard.class)
+                                              inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    [fetchRequest setFetchBatchSize:50];
+    NSFetchedResultsController *controller = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
+                                                                                 managedObjectContext:self.managedObjectContext
+                                                                                   sectionNameKeyPath:nil
+                                                                                            cacheName:@"allCards"];
+    NSError *error;
+    if ([controller performFetch:&error]) {
+        NSLog(@"%@", error);
+        return nil;
+    }
+    return [[ZPLFetchedResultsController alloc] initWithCoreDataManager:self
+                                               managedResultsController:controller
+                                                      generatorFunction:[ZPLCardWrapper creationBlock]];
 }
 
 #pragma mark - Hidden / Internal methods

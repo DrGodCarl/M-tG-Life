@@ -10,6 +10,7 @@
 #import <CoreData/CoreData.h>
 #import "ZPLCardProtocol.h"
 #import "ZPLColorProtocol.h"
+@class ZPLFetchedResultsController<ObjectType>;
 
 @class ZPLCoreDataManager;
 @protocol ZPLCoreDataConsumer <NSObject>
@@ -25,5 +26,7 @@
 
 - (id<ZPLColorProtocol>)colorForName:(NSString *)name;
 - (id<ZPLCardProtocol>)cardForName:(NSString *)name;
+
+- (ZPLFetchedResultsController<id<ZPLCardProtocol>> *)fetchAllCards;
 
 @end
