@@ -26,6 +26,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - ZPLCoreDataConsumer
+
+- (void)ingestCoreDataManager:(ZPLCoreDataManager *)coreDataManager {
+    self.coreDataManager = coreDataManager;
+}
+
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
