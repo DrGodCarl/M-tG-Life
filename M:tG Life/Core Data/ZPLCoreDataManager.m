@@ -11,6 +11,9 @@
 #import "MTGColor.h"
 #import "MTGCard.h"
 
+#import "ZPLCardWrapper.h"
+#import "ZPLColorWrapper.h"
+
 @interface ZPLCoreDataManager()
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
@@ -48,29 +51,25 @@
                                          inManagedObjectContext:self.managedObjectContext];
 }
 
-- (MTGColor *)colorForName:(NSString *)name {
-    if (self.colorCache[name]) {
-        return self.colorCache[name];
-    }
-    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:NSStringFromClass(MTGColor.class)];
-    request.predicate = [NSPredicate predicateWithFormat:@"name == %@", name];
-    NSArray<MTGColor *> *colors = [self.managedObjectContext executeFetchRequest:request error:nil];
-    MTGColor *color = colors[0];
-    self.colorCache[name] = color;
-    return color;
-}
-
-- (MTGCard *)cardForName:(NSString *)name {
-    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:NSStringFromClass(MTGCard.class)];
-    request.predicate = [NSPredicate predicateWithFormat:@"name == %@", name];
-    NSArray<MTGCard *> *cards = [self.managedObjectContext executeFetchRequest:request error:nil];
-    if (![cards count]) {
+- (id<ZPLColorProtocol>)colorForName:(NSString *)name {
+    MTGColor *color = [self mtgColorForName:name];
+    if (!color) {
         return nil;
     }
-    return cards[0];
+    return [[ZPLColorWrapper alloc] initWithManagedObject:color
+                                          coreDataManager:self];
 }
 
-#pragma mark - Hidden methods
+- (id<ZPLCardProtocol>)cardForName:(NSString *)name {
+    MTGCard *card = [self mtgCardForName:name];
+    if (!card) {
+        return nil;
+    }
+    return [[ZPLCardWrapper alloc] initWithManagedObject:card
+                                         coreDataManager:self];
+}
+
+#pragma mark - Hidden / Internal methods
 /** 
   * Below here is a collection of methods that need to be public for utility reasons,
   * like basic population of initial database, but will otherwise remain unexposed.
@@ -84,6 +83,28 @@
 
 - (MTGCard *)createNewCard {
     return [self createNewManagedObjectForClass:MTGCard.class];
+}
+
+- (MTGColor *)mtgColorForName:(NSString *)name {
+    if (self.colorCache[name]) {
+        return self.colorCache[name];
+    }
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:NSStringFromClass(MTGColor.class)];
+    request.predicate = [NSPredicate predicateWithFormat:@"name == %@", name];
+    NSArray<MTGColor *> *colors = [self.managedObjectContext executeFetchRequest:request error:nil];
+    MTGColor *color = colors[0];
+    self.colorCache[name] = color;
+    return color;
+}
+
+- (MTGCard *)mtgCardForName:(NSString *)name {
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:NSStringFromClass(MTGCard.class)];
+    request.predicate = [NSPredicate predicateWithFormat:@"name == %@", name];
+    NSArray<MTGCard *> *cards = [self.managedObjectContext executeFetchRequest:request error:nil];
+    if (![cards count]) {
+        return nil;
+    }
+    return cards[0];
 }
 
 

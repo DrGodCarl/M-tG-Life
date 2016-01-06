@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import "MTGColor.h"
-#import "MTGCard.h"
+#import "ZPLCardProtocol.h"
+#import "ZPLColorProtocol.h"
 
 @class ZPLCoreDataManager;
 @protocol ZPLCoreDataConsumer <NSObject>
@@ -23,7 +23,7 @@
 - (instancetype)initWithManagedObjectContext:(NSManagedObjectContext *)moc;
 - (void)saveContext;
 
-- (MTGColor *)colorForName:(NSString *)name;
-- (MTGCard *)cardForName:(NSString *)name;
+- (id<ZPLColorProtocol>)colorForName:(NSString *)name;
+- (id<ZPLCardProtocol>)cardForName:(NSString *)name;
 
 @end

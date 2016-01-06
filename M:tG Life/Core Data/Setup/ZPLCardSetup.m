@@ -16,13 +16,16 @@
 - (MTGColor *)createNewColor;
 - (MTGCard *)createNewCard;
 
+- (MTGColor *)mtgColorForName:(NSString *)name;
+- (MTGCard *)mtgCardForName:(NSString *)name;
+
 @end
 
 
 @implementation ZPLCardSetup
 
 + (void)insertInitialDataIntoCoreData:(ZPLCoreDataManager *)coreDataManager {
-    if ([coreDataManager cardForName:@"Abbot of Keral Keep"]) {
+    if ([coreDataManager mtgCardForName:@"Abbot of Keral Keep"]) {
         return;
     }
     for (NSString *colorName in @[@"White", @"Blue", @"Black", @"Red", @"Green"]) {
@@ -50,7 +53,7 @@
     NSArray<NSString *> *colors = content[@"colors"];
     NSMutableSet<MTGColor *> *cardColors = [NSMutableSet setWithCapacity:[colors count]];
     for (NSString *color in colors) {
-        [cardColors addObject:[coreDataManager colorForName:color]];
+        [cardColors addObject:[coreDataManager mtgColorForName:color]];
     }
     card.colors = [cardColors copy];
 }
