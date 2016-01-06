@@ -12,12 +12,13 @@
 @class ZPLCoreDataManager;
 @protocol ZPLCoreDataConsumer <NSObject>
 
-- (void)setCoreDataManager:(ZPLCoreDataManager *)coreDataManager;
+- (void)ingestCoreDataManager:(ZPLCoreDataManager *)coreDataManager;
 
 @end
 
 @interface ZPLCoreDataManager : NSObject
 
 - (instancetype)initWithManagedObjectContext:(NSManagedObjectContext *)moc;
+- (void)saveContext;
 
 @end
