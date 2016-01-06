@@ -10,6 +10,9 @@
 		BA1F48331C33719A000B5CE3 /* ZPLMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1F48321C33719A000B5CE3 /* ZPLMainTabBarController.m */; };
 		BA1F48361C337F1F000B5CE3 /* ZPLCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1F48351C337F1F000B5CE3 /* ZPLCollectionViewController.m */; };
 		BA1F48391C338CEA000B5CE3 /* ZPLCardsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1F48381C338CEA000B5CE3 /* ZPLCardsTableViewController.m */; };
+		BA5B8CC11C3CBD7700900BB1 /* ZPLDecksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5B8CC01C3CBD7700900BB1 /* ZPLDecksViewController.m */; };
+		BA5B8CC41C3CBDC600900BB1 /* ZPLColorSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5B8CC31C3CBDC600900BB1 /* ZPLColorSelectorView.m */; };
+		BA5B8CC71C3CBF0A00900BB1 /* ZPLDecksTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5B8CC61C3CBF0A00900BB1 /* ZPLDecksTableViewController.m */; };
 		BE283CDD1C33611C00E71598 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE283CDC1C33611C00E71598 /* main.m */; };
 		BE283CE01C33611C00E71598 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE283CDF1C33611C00E71598 /* AppDelegate.m */; };
 		BE283CE61C33611C00E71598 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE283CE41C33611C00E71598 /* Main.storyboard */; };
@@ -56,6 +59,12 @@
 		BA1F48351C337F1F000B5CE3 /* ZPLCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPLCollectionViewController.m; sourceTree = "<group>"; };
 		BA1F48371C338CEA000B5CE3 /* ZPLCardsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPLCardsTableViewController.h; sourceTree = "<group>"; };
 		BA1F48381C338CEA000B5CE3 /* ZPLCardsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPLCardsTableViewController.m; sourceTree = "<group>"; };
+		BA5B8CBF1C3CBD7700900BB1 /* ZPLDecksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPLDecksViewController.h; sourceTree = "<group>"; };
+		BA5B8CC01C3CBD7700900BB1 /* ZPLDecksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPLDecksViewController.m; sourceTree = "<group>"; };
+		BA5B8CC21C3CBDC600900BB1 /* ZPLColorSelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPLColorSelectorView.h; sourceTree = "<group>"; };
+		BA5B8CC31C3CBDC600900BB1 /* ZPLColorSelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPLColorSelectorView.m; sourceTree = "<group>"; };
+		BA5B8CC51C3CBF0A00900BB1 /* ZPLDecksTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPLDecksTableViewController.h; sourceTree = "<group>"; };
+		BA5B8CC61C3CBF0A00900BB1 /* ZPLDecksTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPLDecksTableViewController.m; sourceTree = "<group>"; };
 		BE283CD81C33611C00E71598 /* M:tG Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "M:tG Life.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE283CDC1C33611C00E71598 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BE283CDE1C33611C00E71598 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -132,6 +141,12 @@
 				BA1F48381C338CEA000B5CE3 /* ZPLCardsTableViewController.m */,
 				BA1F48341C337F1F000B5CE3 /* ZPLCollectionViewController.h */,
 				BA1F48351C337F1F000B5CE3 /* ZPLCollectionViewController.m */,
+				BA5B8CC21C3CBDC600900BB1 /* ZPLColorSelectorView.h */,
+				BA5B8CC31C3CBDC600900BB1 /* ZPLColorSelectorView.m */,
+				BA5B8CC51C3CBF0A00900BB1 /* ZPLDecksTableViewController.h */,
+				BA5B8CC61C3CBF0A00900BB1 /* ZPLDecksTableViewController.m */,
+				BA5B8CBF1C3CBD7700900BB1 /* ZPLDecksViewController.h */,
+				BA5B8CC01C3CBD7700900BB1 /* ZPLDecksViewController.m */,
 				BA1F48311C33719A000B5CE3 /* ZPLMainTabBarController.h */,
 				BA1F48321C33719A000B5CE3 /* ZPLMainTabBarController.m */,
 			);
@@ -385,7 +400,7 @@
 			files = (
 				BE283D261C336CF100E71598 /* ZPLCardSetup.m in Sources */,
 				BEC15EE11C3CAC4100F160B3 /* MTGCard+CoreDataProperties.m in Sources */,
-				BE283CE31C33611C00E71598 /* ViewController.m in Sources */,
+				BA5B8CC11C3CBD7700900BB1 /* ZPLDecksViewController.m in Sources */,
 				BE283D221C336C8900E71598 /* M_tG_Life.xcdatamodeld in Sources */,
 				BEC15EE21C3CAC4100F160B3 /* MTGCard.m in Sources */,
 				BEC15EF51C3CC85300F160B3 /* ZPLFetchedResultsController.m in Sources */,
@@ -397,8 +412,10 @@
 				BEC15EEF1C3CBCB700F160B3 /* ZPLManagedObjectWrapper.m in Sources */,
 				BEC15EE91C3CBACE00F160B3 /* ZPLCardWrapper.m in Sources */,
 				BE283CDD1C33611C00E71598 /* main.m in Sources */,
+				BA5B8CC71C3CBF0A00900BB1 /* ZPLDecksTableViewController.m in Sources */,
 				BA1F48361C337F1F000B5CE3 /* ZPLCollectionViewController.m in Sources */,
 				BA1F48391C338CEA000B5CE3 /* ZPLCardsTableViewController.m in Sources */,
+				BA5B8CC41C3CBDC600900BB1 /* ZPLColorSelectorView.m in Sources */,
 				BA1F48331C33719A000B5CE3 /* ZPLMainTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

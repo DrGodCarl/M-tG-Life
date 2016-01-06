@@ -9,7 +9,7 @@
         <!--Decks-->
         <scene sceneID="Tfb-Ax-9AH">
             <objects>
-                <viewController id="ftA-Vg-FfX" sceneMemberID="viewController">
+                <viewController id="ftA-Vg-FfX" customClass="ZPLDecksViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JyO-RD-Y4n"/>
                         <viewControllerLayoutGuide type="bottom" id="k54-ni-SsL"/>
@@ -17,9 +17,33 @@
                     <view key="view" contentMode="scaleToFill" id="Rww-hv-HIP">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u7l-FA-dDw" customClass="ZPLColorSelectorView">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Y6M-b3-b01"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I7q-XO-wMo">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <connections>
+                                    <segue destination="wxt-sZ-I8f" kind="embed" id="Eq8-pU-rsp"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="u7l-FA-dDw" secondAttribute="trailing" constant="-20" id="37D-i6-bF3"/>
+                            <constraint firstItem="u7l-FA-dDw" firstAttribute="leading" secondItem="Rww-hv-HIP" secondAttribute="leadingMargin" constant="-20" id="AwV-SL-cIU"/>
+                            <constraint firstItem="I7q-XO-wMo" firstAttribute="top" secondItem="u7l-FA-dDw" secondAttribute="bottom" id="C3d-cC-eWr"/>
+                            <constraint firstItem="I7q-XO-wMo" firstAttribute="leading" secondItem="Rww-hv-HIP" secondAttribute="leadingMargin" constant="-20" id="Yc6-hb-l9t"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="I7q-XO-wMo" secondAttribute="trailing" constant="-20" id="fov-92-cQV"/>
+                            <constraint firstItem="u7l-FA-dDw" firstAttribute="top" secondItem="JyO-RD-Y4n" secondAttribute="bottom" id="gED-xc-zLD"/>
+                            <constraint firstItem="k54-ni-SsL" firstAttribute="top" secondItem="I7q-XO-wMo" secondAttribute="bottom" id="n0Y-cK-f4g"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Decks" id="amO-Th-hW4"/>
+                    <tabBarItem key="tabBarItem" title="Decks" image="DeckBox" id="amO-Th-hW4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbI-uc-XO3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -97,7 +121,7 @@
                             <constraint firstItem="MnZ-4z-b6H" firstAttribute="leading" secondItem="kqS-uP-L0G" secondAttribute="leadingMargin" constant="-20" id="joz-IZ-cA4"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Collection" id="ZK6-aL-MTc"/>
+                    <tabBarItem key="tabBarItem" title="Collection" image="CollectionChest" id="ZK6-aL-MTc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zkz-hN-B2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -131,6 +155,34 @@
             </objects>
             <point key="canvasLocation" x="2090" y="246.5"/>
         </scene>
+        <!--Decks Table View Controller-->
+        <scene sceneID="hSh-ZO-MNM">
+            <objects>
+                <tableViewController id="wxt-sZ-I8f" customClass="ZPLDecksTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="JCW-Rj-xPA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DeckCell" id="oQX-fv-MJd">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oQX-fv-MJd" id="Ydt-Gp-gGw">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wxt-sZ-I8f" id="SdQ-j3-jaB"/>
+                            <outlet property="delegate" destination="wxt-sZ-I8f" id="8qz-Ec-8du"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z1J-Md-SZP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2084" y="907.5"/>
+        </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="EL7-9j-IEo">
             <objects>
@@ -152,4 +204,8 @@
             <point key="canvasLocation" x="610" y="1880"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CollectionChest" width="48" height="32"/>
+        <image name="DeckBox" width="48" height="32"/>
+    </resources>
 </document>
