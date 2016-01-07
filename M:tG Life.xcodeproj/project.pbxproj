@@ -134,6 +134,8 @@
 				BE19BF251C3E08B000F0916B /* ZPLColorProtocol.h */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
 		BA1F48301C3370FB000B5CE3 /* UI */ = {
 			isa = PBXGroup;
 			children = (
