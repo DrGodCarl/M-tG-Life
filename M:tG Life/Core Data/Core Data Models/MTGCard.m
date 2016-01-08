@@ -11,6 +11,8 @@
 
 @implementation MTGCard
 
-// Insert code here to add functionality to your managed object subclass
+- (NSString *)firstLetterOfName {
+    return [[self.name substringToIndex:1] uppercaseString];
+}
 
 @end

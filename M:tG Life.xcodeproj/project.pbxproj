@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BA1B8F061C3E16E700027FB0 /* AllCards.json in Resources */ = {isa = PBXBuildFile; fileRef = BA1B8F051C3E16E700027FB0 /* AllCards.json */; };
 		BA1F48331C33719A000B5CE3 /* ZPLMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1F48321C33719A000B5CE3 /* ZPLMainTabBarController.m */; };
 		BA1F48361C337F1F000B5CE3 /* ZPLCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1F48351C337F1F000B5CE3 /* ZPLCollectionViewController.m */; };
 		BA1F48391C338CEA000B5CE3 /* ZPLCardsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1F48381C338CEA000B5CE3 /* ZPLCardsTableViewController.m */; };
@@ -52,7 +51,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BA1B8F051C3E16E700027FB0 /* AllCards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AllCards.json; sourceTree = "<group>"; };
 		BA1F48311C33719A000B5CE3 /* ZPLMainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPLMainTabBarController.h; sourceTree = "<group>"; };
 		BA1F48321C33719A000B5CE3 /* ZPLMainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPLMainTabBarController.m; sourceTree = "<group>"; };
 		BA1F48341C337F1F000B5CE3 /* ZPLCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPLCollectionViewController.h; sourceTree = "<group>"; };
@@ -189,7 +187,6 @@
 				BE283CEA1C33611C00E71598 /* Assets.xcassets */,
 				BE283CEC1C33611C00E71598 /* LaunchScreen.storyboard */,
 				BE283CEF1C33611C00E71598 /* Info.plist */,
-				BA1B8F051C3E16E700027FB0 /* AllCards.json */,
 				BE283CDB1C33611C00E71598 /* Supporting Files */,
 			);
 			path = "M:tG Life";
@@ -379,7 +376,6 @@
 				BE283CEE1C33611C00E71598 /* LaunchScreen.storyboard in Resources */,
 				BE283CEB1C33611C00E71598 /* Assets.xcassets in Resources */,
 				BE283CE61C33611C00E71598 /* Main.storyboard in Resources */,
-				BA1B8F061C3E16E700027FB0 /* AllCards.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

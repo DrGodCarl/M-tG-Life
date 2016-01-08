@@ -81,7 +81,7 @@
     [fetchRequest setSortDescriptors:sortDescriptors];
     NSFetchedResultsController *controller = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
                                                                                  managedObjectContext:self.managedObjectContext
-                                                                                   sectionNameKeyPath:nil
+                                                                                   sectionNameKeyPath:@"firstLetterOfName"
                                                                                             cacheName:@"allCards"];
     NSError *error;
     if (![controller performFetch:&error]) {

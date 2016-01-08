@@ -46,11 +46,15 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1; // TODO Carl I want a method for this
+    return [self.fetchedResultsController numberOfSections];
+}
+
+- (NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    return [self.fetchedResultsController sectionIndexTitles];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 50; // TODO Carl i want a method for this
+    return [self.fetchedResultsController numberOfObjectsInSection:section];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
