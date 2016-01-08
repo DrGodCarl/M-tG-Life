@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA1B8F061C3E16E700027FB0 /* AllCards.json in Resources */ = {isa = PBXBuildFile; fileRef = BA1B8F051C3E16E700027FB0 /* AllCards.json */; };
 		BA1F48331C33719A000B5CE3 /* ZPLMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1F48321C33719A000B5CE3 /* ZPLMainTabBarController.m */; };
 		BA1F48361C337F1F000B5CE3 /* ZPLCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1F48351C337F1F000B5CE3 /* ZPLCollectionViewController.m */; };
 		BA1F48391C338CEA000B5CE3 /* ZPLCardsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1F48381C338CEA000B5CE3 /* ZPLCardsTableViewController.m */; };
@@ -51,8 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BE19BF241C3E08B000F0916B /* ZPLCardProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPLCardProtocol.h; sourceTree = "<group>"; };
-		BE19BF251C3E08B000F0916B /* ZPLColorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPLColorProtocol.h; sourceTree = "<group>"; };
+		BA1B8F051C3E16E700027FB0 /* AllCards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AllCards.json; sourceTree = "<group>"; };
 		BA1F48311C33719A000B5CE3 /* ZPLMainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPLMainTabBarController.h; sourceTree = "<group>"; };
 		BA1F48321C33719A000B5CE3 /* ZPLMainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPLMainTabBarController.m; sourceTree = "<group>"; };
 		BA1F48341C337F1F000B5CE3 /* ZPLCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPLCollectionViewController.h; sourceTree = "<group>"; };
@@ -65,6 +65,8 @@
 		BA5B8CC31C3CBDC600900BB1 /* ZPLColorSelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPLColorSelectorView.m; sourceTree = "<group>"; };
 		BA5B8CC51C3CBF0A00900BB1 /* ZPLDecksTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPLDecksTableViewController.h; sourceTree = "<group>"; };
 		BA5B8CC61C3CBF0A00900BB1 /* ZPLDecksTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPLDecksTableViewController.m; sourceTree = "<group>"; };
+		BE19BF241C3E08B000F0916B /* ZPLCardProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPLCardProtocol.h; sourceTree = "<group>"; };
+		BE19BF251C3E08B000F0916B /* ZPLColorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPLColorProtocol.h; sourceTree = "<group>"; };
 		BE283CD81C33611C00E71598 /* M:tG Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "M:tG Life.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE283CDC1C33611C00E71598 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BE283CDE1C33611C00E71598 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -127,15 +129,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BE19BF231C3E08B000F0916B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				BE19BF241C3E08B000F0916B /* ZPLCardProtocol.h */,
-				BE19BF251C3E08B000F0916B /* ZPLColorProtocol.h */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		BA1F48301C3370FB000B5CE3 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +146,15 @@
 				BA1F48321C33719A000B5CE3 /* ZPLMainTabBarController.m */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		BE19BF231C3E08B000F0916B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BE19BF241C3E08B000F0916B /* ZPLCardProtocol.h */,
+				BE19BF251C3E08B000F0916B /* ZPLColorProtocol.h */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		BE283CCF1C33611C00E71598 = {
@@ -187,6 +189,7 @@
 				BE283CEA1C33611C00E71598 /* Assets.xcassets */,
 				BE283CEC1C33611C00E71598 /* LaunchScreen.storyboard */,
 				BE283CEF1C33611C00E71598 /* Info.plist */,
+				BA1B8F051C3E16E700027FB0 /* AllCards.json */,
 				BE283CDB1C33611C00E71598 /* Supporting Files */,
 			);
 			path = "M:tG Life";
@@ -376,6 +379,7 @@
 				BE283CEE1C33611C00E71598 /* LaunchScreen.storyboard in Resources */,
 				BE283CEB1C33611C00E71598 /* Assets.xcassets in Resources */,
 				BE283CE61C33611C00E71598 /* Main.storyboard in Resources */,
+				BA1B8F061C3E16E700027FB0 /* AllCards.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

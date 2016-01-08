@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZPLCoreDataManager.h"
 
-@interface ZPLCardsTableViewController : UITableViewController
+@interface ZPLCardsTableViewController : UITableViewController <ZPLCoreDataConsumer>
 
 @end

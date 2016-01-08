@@ -7,8 +7,14 @@
 //
 
 #import "ZPLCardsTableViewController.h"
+#import "ZPLFetchedResultsController.h"
+#import "ZPLCoreDataManager.h"
+#import "ZPLCardWrapper.h"
 
 @interface ZPLCardsTableViewController ()
+
+@property (nonatomic, weak) ZPLCoreDataManager* coreDataManager;
+@property (nonatomic, strong) ZPLFetchedResultsController<id<ZPLCardProtocol>> *fetchedResultsController;
 
 @end
 
@@ -29,27 +35,32 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - ZPLCoreDataConsumer
+
+- (void)ingestCoreDataManager:(ZPLCoreDataManager *)coreDataManager {
+    self.coreDataManager = coreDataManager;
+    self.fetchedResultsController = [self.coreDataManager fetchAllCards];
+    [self.tableView reloadData];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1; // TODO Carl I want a method for this
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return 50; // TODO Carl i want a method for this
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CardCell" forIndexPath:indexPath];
+    ZPLCardWrapper *card = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    [cell.textLabel setText:card.name];
     // Configure the cell...
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.

@@ -30,13 +30,18 @@
 
 - (void)ingestCoreDataManager:(ZPLCoreDataManager *)coreDataManager {
     self.coreDataManager = coreDataManager;
+    for (__kindof UIViewController *viewController in self.viewControllers) {
+        if ([viewController conformsToProtocol:@protocol(ZPLCoreDataConsumer)]) {
+            [viewController ingestCoreDataManager:self.coreDataManager];
+        }
+    }
 }
 
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue destinationViewController] conformsToProtocol:@protocol(ZPLCoreDataConsumer)]) {
-        [[segue destinationViewController] setCoreDataManager:self.coreDataManager];
+        [[segue destinationViewController] ingestCoreDataManager:self.coreDataManager];
     }
 }
 
