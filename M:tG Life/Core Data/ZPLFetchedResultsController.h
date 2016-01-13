@@ -20,6 +20,10 @@ typedef ObjectType(^GeneratorBlock)(__kindof NSManagedObject *, ZPLCoreDataManag
 managedResultsController:(NSFetchedResultsController *)resultsController
 generatorFunction:(GeneratorBlock)genFunc;
 
+- (NSUInteger)numberOfSections;
+- (NSArray<NSString *> *)sectionIndexTitles;
+- (NSUInteger)numberOfObjectsInSection:(NSUInteger)sectionNumber;
+
 - (ObjectType)objectAtIndexPath:(NSIndexPath *)indexPath;
 - (NSIndexPath *)indexPathForObject:(ObjectType)object;
 

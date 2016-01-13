@@ -2,7 +2,7 @@
 //  MTGCard+CoreDataProperties.m
 //  M:tG Life
 //
-//  Created by Carl Benson on 1/5/16.
+//  Created by Carl Benson on 1/7/16.
 //  Copyright © 2016 Zero Point Logic. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -14,6 +14,7 @@
 @implementation MTGCard (CoreDataProperties)
 
 @dynamic name;
+@dynamic firstLetterOfName;
 @dynamic colors;
 
 @end

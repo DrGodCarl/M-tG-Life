@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="14F1021" minimumToolsVersion="Automatic">
     <entity name="MTGCard" representedClassName="MTGCard" syncable="YES">
+        <attribute name="firstLetterOfName" transient="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="colors" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MTGColor" inverseName="cards" inverseEntity="MTGColor" syncable="YES"/>
     </entity>
@@ -27,7 +28,7 @@
         <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
     <elements>
-        <element name="MTGCard" positionX="-36" positionY="9" width="128" height="75"/>
+        <element name="MTGCard" positionX="-36" positionY="9" width="128" height="90"/>
         <element name="MTGCardCount" positionX="-54" positionY="-9" width="128" height="45"/>
         <element name="MTGColor" positionX="-63" positionY="-18" width="128" height="75"/>
         <element name="MTGDeck" positionX="-18" positionY="27" width="128" height="45"/>

@@ -30,6 +30,18 @@
     return self;
 }
 
+- (NSUInteger)numberOfSections {
+    return [[self.resultsController sections] count];
+}
+
+- (NSArray<NSString *> *)sectionIndexTitles {
+    return [self.resultsController sectionIndexTitles];
+}
+
+- (NSUInteger)numberOfObjectsInSection:(NSUInteger)sectionNumber {
+    return [[[self.resultsController sections] objectAtIndex:sectionNumber] numberOfObjects];
+}
+
 - (id)objectAtIndexPath:(NSIndexPath *)indexPath {
     return self.genBlock([self.resultsController objectAtIndexPath:indexPath], self.coreDataManager);
 }

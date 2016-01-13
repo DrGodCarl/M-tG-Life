@@ -76,12 +76,15 @@
                                               inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     [fetchRequest setFetchBatchSize:50];
+    NSSortDescriptor *nameDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+    NSArray *sortDescriptors = @[nameDescriptor];
+    [fetchRequest setSortDescriptors:sortDescriptors];
     NSFetchedResultsController *controller = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
                                                                                  managedObjectContext:self.managedObjectContext
-                                                                                   sectionNameKeyPath:nil
+                                                                                   sectionNameKeyPath:@"firstLetterOfName"
                                                                                             cacheName:@"allCards"];
     NSError *error;
-    if ([controller performFetch:&error]) {
+    if (![controller performFetch:&error]) {
         NSLog(@"%@", error);
         return nil;
     }
