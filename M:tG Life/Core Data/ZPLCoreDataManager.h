@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 #import "ZPLCardProtocol.h"
-#import "ZPLColorProtocol.h"
+
 @class ZPLFetchedResultsController<ObjectType>;
 
 @class ZPLCoreDataManager;
@@ -24,7 +24,6 @@
 - (instancetype)initWithManagedObjectContext:(NSManagedObjectContext *)moc;
 - (void)saveContext;
 
-- (id<ZPLColorProtocol>)colorForName:(NSString *)name;
 - (id<ZPLCardProtocol>)cardForName:(NSString *)name;
 
 - (ZPLFetchedResultsController<id<ZPLCardProtocol>> *)fetchAllCards;

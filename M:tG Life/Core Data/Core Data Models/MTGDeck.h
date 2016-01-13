@@ -1,5 +1,5 @@
 //
-//  MTGCard.h
+//  MTGDeck.h
 //  M:tG Life
 //
 //  Created by Carl Benson on 1/12/16.
@@ -9,13 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-#import "ZPLCardProtocol.h"
-
 @class MTGCardCount;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MTGCard : NSManagedObject <ZPLCardProtocol>
+@interface MTGDeck : NSManagedObject
 
 // Insert code here to declare functionality of your managed object subclass
 
@@ -23,4 +21,4 @@ NS_ASSUME_NONNULL_BEGIN
 
 NS_ASSUME_NONNULL_END
 
-#import "MTGCard+CoreDataProperties.h"
+#import "MTGDeck+CoreDataProperties.h"

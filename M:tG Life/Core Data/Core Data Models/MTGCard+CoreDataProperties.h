@@ -2,7 +2,7 @@
 //  MTGCard+CoreDataProperties.h
 //  M:tG Life
 //
-//  Created by Carl Benson on 1/7/16.
+//  Created by Carl Benson on 1/12/16.
 //  Copyright © 2016 Zero Point Logic. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -15,18 +15,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MTGCard (CoreDataProperties)
 
-@property (nullable, nonatomic, retain) NSString *name;
+@property (nullable, nonatomic, retain) NSString *colors;
 @property (nullable, nonatomic, retain) NSString *firstLetterOfName;
-@property (nullable, nonatomic, retain) NSSet<MTGColor *> *colors;
-
-@end
-
-@interface MTGCard (CoreDataGeneratedAccessors)
-
-- (void)addColorsObject:(MTGColor *)value;
-- (void)removeColorsObject:(MTGColor *)value;
-- (void)addColors:(NSSet<MTGColor *> *)values;
-- (void)removeColors:(NSSet<MTGColor *> *)values;
+@property (nullable, nonatomic, retain) NSString *name;
+@property (nullable, nonatomic, retain) NSString *text;
+@property (nullable, nonatomic, retain) NSString *types;
+@property (nullable, nonatomic, retain) NSString *btmRightDescription;
+@property (nullable, nonatomic, retain) MTGCardCount *cardCounts;
 
 @end
 

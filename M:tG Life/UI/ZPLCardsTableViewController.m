@@ -9,7 +9,6 @@
 #import "ZPLCardsTableViewController.h"
 #import "ZPLFetchedResultsController.h"
 #import "ZPLCoreDataManager.h"
-#import "ZPLCardWrapper.h"
 
 @interface ZPLCardsTableViewController ()
 
@@ -59,8 +58,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CardCell" forIndexPath:indexPath];
-    ZPLCardWrapper *card = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    [cell.textLabel setText:card.name];
+    id<ZPLCardProtocol> card = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    [cell.textLabel setText:[card fetchName]];
     // Configure the cell...
     
     return cell;

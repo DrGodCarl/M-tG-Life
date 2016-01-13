@@ -10,22 +10,16 @@
 
 @interface ZPLFetchedResultsController()
 
-@property (strong, nonatomic) ZPLCoreDataManager *coreDataManager;
 @property (strong, nonatomic) NSFetchedResultsController *resultsController;
-@property (strong, nonatomic) GeneratorBlock genBlock;
 
 @end
 
 @implementation ZPLFetchedResultsController
 @dynamic sectionIndexTitles;
 
-- (instancetype)initWithCoreDataManager:(ZPLCoreDataManager *)coreDataManager
-               managedResultsController:(NSFetchedResultsController *)resultsController
-                      generatorFunction:(GeneratorBlock)genFunc {
+- (instancetype)initWithManagedResultsController:(NSFetchedResultsController *)resultsController {
     if (self = [super init]) {
-        self.coreDataManager = coreDataManager;
         self.resultsController = resultsController;
-        self.genBlock = genFunc;
     }
     return self;
 }
@@ -43,11 +37,11 @@
 }
 
 - (id)objectAtIndexPath:(NSIndexPath *)indexPath {
-    return self.genBlock([self.resultsController objectAtIndexPath:indexPath], self.coreDataManager);
+    return [self.resultsController objectAtIndexPath:indexPath];
 }
 
-- (NSIndexPath *)indexPathForObject:(ZPLManagedObjectWrapper *)object {
-    return [self.resultsController indexPathForObject:object.object];
+- (NSIndexPath *)indexPathForObject:(__kindof NSManagedObject *)object {
+    return [self.resultsController indexPathForObject:object];
 }
 
 - (NSString *)sectionIndexTitleForSectionName:(NSString *)sectionName {
