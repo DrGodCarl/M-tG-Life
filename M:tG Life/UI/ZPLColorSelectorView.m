@@ -18,27 +18,26 @@ typedef NS_ENUM(NSUInteger, ZPLCardinalColor) {
 };
 
 NSString* cardinalColorToString(ZPLCardinalColor cardinalColor) {
-    NSString *colorString = nil;
     switch (cardinalColor) {
         case ZPLCardinalColorWhite:
-            colorString = @"White";
+            return @"White";
             break;
         case ZPLCardinalColorBlue:
-            colorString = @"Blue";
+            return @"Blue";
             break;
         case ZPLCardinalColorBlack:
-            colorString = @"Black";
+            return @"Black";
             break;
         case ZPLCardinalColorRed:
-            colorString = @"Red";
+            return @"Red";
             break;
         case ZPLCardinalColorGreen:
-            colorString = @"Green";
+            return @"Green";
             break;
         default:
+            return nil;
             break;
     }
-    return colorString;
 }
 
 @interface ZPLColorSelectorView ()
