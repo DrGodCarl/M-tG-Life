@@ -11,6 +11,6 @@
 
 @interface ZPLCardSetup : NSObject
 
-+ (void)insertInitialDataIntoCoreData:(ZPLCoreDataManager *)coreDataManager;
-
++ (void)insertInitialDataIntoCoreData:(ZPLCoreDataManager *)coreDataManager
+                             jsonFile:(NSURL *)jsonFileURL;
 @end

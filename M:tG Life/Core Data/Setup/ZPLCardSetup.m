@@ -21,11 +21,15 @@
 
 @implementation ZPLCardSetup
 
-+ (void)insertInitialDataIntoCoreData:(ZPLCoreDataManager *)coreDataManager {
++ (void)insertInitialDataIntoCoreData:(ZPLCoreDataManager *)coreDataManager
+                             jsonFile:(NSURL *)jsonFileURL {
     if ([coreDataManager mtgCardForName:@"Abbot of Keral Keep"]) {
         return;
     }
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"AllCards" ofType:@"json"];
+    NSString *filePath = [jsonFileURL absoluteString];
+    NSString *fileName = [[filePath componentsSeparatedByString:@"/"] lastObject];
+    NSString *docs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    filePath = [NSString stringWithFormat:@"%@/Inbox/%@", docs, fileName];
     NSData *jsonData = [NSData dataWithContentsOfFile:filePath];
     NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData
                                                              options:0
