@@ -1,5 +1,5 @@
 //
-//  MTGCard+CoreDataProperties.m
+//  MTGCardCount+CoreDataProperties.m
 //  M:tG Life
 //
 //  Created by Carl Benson on 1/28/16.
@@ -9,16 +9,12 @@
 //  to delete and recreate this implementation file for your updated model.
 //
 
-#import "MTGCard+CoreDataProperties.h"
+#import "MTGCardCount+CoreDataProperties.h"
 
-@implementation MTGCard (CoreDataProperties)
+@implementation MTGCardCount (CoreDataProperties)
 
-@dynamic mtgBtmRightDescription;
-@dynamic mtgColors;
-@dynamic mtgFirstLetterOfName;
-@dynamic mtgName;
-@dynamic mtgText;
-@dynamic mtgTypes;
-@dynamic mtgCardCounts;
+@dynamic mtgCount;
+@dynamic mtgCard;
+@dynamic mtgDeck;
 
 @end

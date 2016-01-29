@@ -6,12 +6,12 @@
 //  Copyright © 2016 Zero Point Logic. All rights reserved.
 //
 #import <Foundation/Foundation.h>
-#import "ZPLColorProtocol.h"
 
 @protocol ZPLCardProtocol <NSObject>
 
-@property (readonly) NSString *name;
-
-- (NSSet<id<ZPLColorProtocol>> *)getColors;
+- (NSString *)name;
+- (NSString *)text;
+- (NSArray<NSString *> *)colors;
+- (NSArray<NSString *> *)types;
 
 @end

@@ -8,18 +8,12 @@
 
 #import "ZPLCoreDataManager.h"
 
-#import "MTGColor.h"
 #import "MTGCard.h"
-
-#import "ZPLCardWrapper.h"
-#import "ZPLColorWrapper.h"
 #import "ZPLFetchedResultsController.h"
 
 @interface ZPLCoreDataManager()
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-
-@property (strong, nonatomic) NSMutableDictionary<NSString *, MTGColor *> *colorCache;
 
 @end
 
@@ -28,7 +22,6 @@
 - (instancetype)initWithManagedObjectContext:(NSManagedObjectContext *)moc {
     if (self = [super init]) {
         self.managedObjectContext = moc;
-        self.colorCache = [[NSMutableDictionary alloc] init];
     }
     return self;
 }
@@ -52,45 +45,33 @@
                                          inManagedObjectContext:self.managedObjectContext];
 }
 
-- (id<ZPLColorProtocol>)colorForName:(NSString *)name {
-    MTGColor *color = [self mtgColorForName:name];
-    if (!color) {
-        return nil;
-    }
-    return [[ZPLColorWrapper alloc] initWithManagedObject:color
-                                          coreDataManager:self];
-}
-
 - (id<ZPLCardProtocol>)cardForName:(NSString *)name {
     MTGCard *card = [self mtgCardForName:name];
     if (!card) {
         return nil;
     }
-    return [[ZPLCardWrapper alloc] initWithManagedObject:card
-                                         coreDataManager:self];
+    return card;
 }
 
-- (ZPLFetchedResultsController<ZPLCardWrapper *> *)fetchAllCards {
+- (ZPLFetchedResultsController<MTGCard *> *)fetchAllCards {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:NSStringFromClass(MTGCard.class)
                                               inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     [fetchRequest setFetchBatchSize:50];
-    NSSortDescriptor *nameDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+    NSSortDescriptor *nameDescriptor = [[NSSortDescriptor alloc] initWithKey:@"mtgName" ascending:YES];
     NSArray *sortDescriptors = @[nameDescriptor];
     [fetchRequest setSortDescriptors:sortDescriptors];
     NSFetchedResultsController *controller = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
                                                                                  managedObjectContext:self.managedObjectContext
-                                                                                   sectionNameKeyPath:@"firstLetterOfName"
+                                                                                   sectionNameKeyPath:@"mtgFirstLetterOfName"
                                                                                             cacheName:@"allCards"];
     NSError *error;
     if (![controller performFetch:&error]) {
         NSLog(@"%@", error);
         return nil;
     }
-    return [[ZPLFetchedResultsController alloc] initWithCoreDataManager:self
-                                               managedResultsController:controller
-                                                      generatorFunction:[ZPLCardWrapper creationBlock]];
+    return [[ZPLFetchedResultsController alloc] initWithManagedResultsController:controller];
 }
 
 #pragma mark - Hidden / Internal methods
@@ -101,29 +82,13 @@
   * place ends up needing them I'll create a category somewhere.
   */
 
-- (MTGColor *)createNewColor {
-    return [self createNewManagedObjectForClass:MTGColor.class];
-}
-
 - (MTGCard *)createNewCard {
     return [self createNewManagedObjectForClass:MTGCard.class];
 }
 
-- (MTGColor *)mtgColorForName:(NSString *)name {
-    if (self.colorCache[name]) {
-        return self.colorCache[name];
-    }
-    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:NSStringFromClass(MTGColor.class)];
-    request.predicate = [NSPredicate predicateWithFormat:@"name == %@", name];
-    NSArray<MTGColor *> *colors = [self.managedObjectContext executeFetchRequest:request error:nil];
-    MTGColor *color = colors[0];
-    self.colorCache[name] = color;
-    return color;
-}
-
 - (MTGCard *)mtgCardForName:(NSString *)name {
     NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:NSStringFromClass(MTGCard.class)];
-    request.predicate = [NSPredicate predicateWithFormat:@"name == %@", name];
+    request.predicate = [NSPredicate predicateWithFormat:@"mtgName == %@", name];
     NSArray<MTGCard *> *cards = [self.managedObjectContext executeFetchRequest:request error:nil];
     if (![cards count]) {
         return nil;

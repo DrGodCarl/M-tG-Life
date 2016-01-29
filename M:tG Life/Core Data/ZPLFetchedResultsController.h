@@ -8,17 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-#import "ZPLManagedObjectWrapper.h"
 #import "ZPLCoreDataManager.h"
 #import <CoreData/CoreData.h>
 
 
 @interface ZPLFetchedResultsController<ObjectType> : NSObject
-typedef ObjectType(^GeneratorBlock)(__kindof NSManagedObject *, ZPLCoreDataManager *);
 
-- (instancetype)initWithCoreDataManager:(ZPLCoreDataManager *)coreDataManager
-managedResultsController:(NSFetchedResultsController *)resultsController
-generatorFunction:(GeneratorBlock)genFunc;
+- (instancetype)initWithManagedResultsController:(NSFetchedResultsController *)resultsController;
 
 - (NSUInteger)numberOfSections;
 - (NSArray<NSString *> *)sectionIndexTitles;

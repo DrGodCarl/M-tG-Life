@@ -7,16 +7,13 @@
 //
 
 #import "ZPLCardSetup.h"
-#import "MTGColor.h"
 #import "MTGCard.h"
 
 // Super secret hidden interface :)
 @interface ZPLCoreDataManager()
 
-- (MTGColor *)createNewColor;
 - (MTGCard *)createNewCard;
 
-- (MTGColor *)mtgColorForName:(NSString *)name;
 - (MTGCard *)mtgCardForName:(NSString *)name;
 
 @end
@@ -27,9 +24,6 @@
 + (void)insertInitialDataIntoCoreData:(ZPLCoreDataManager *)coreDataManager {
     if ([coreDataManager mtgCardForName:@"Abbot of Keral Keep"]) {
         return;
-    }
-    for (NSString *colorName in @[@"White", @"Blue", @"Black", @"Red", @"Green"]) {
-        [coreDataManager createNewColor].name = colorName;
     }
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"AllCards" ofType:@"json"];
     NSData *jsonData = [NSData dataWithContentsOfFile:filePath];
@@ -49,13 +43,20 @@
 
 + (void)insertCard:(NSDictionary *)content named:(NSString *)cardName intoCoreData:(ZPLCoreDataManager *)coreDataManager {
     MTGCard *card = [coreDataManager createNewCard];
-    card.name = cardName;
-    NSArray<NSString *> *colors = content[@"colors"];
-    NSMutableSet<MTGColor *> *cardColors = [NSMutableSet setWithCapacity:[colors count]];
-    for (NSString *color in colors) {
-        [cardColors addObject:[coreDataManager mtgColorForName:color]];
+    card.mtgName = cardName;
+    NSString *colors = [((NSArray<NSString *> *)content[@"colors"]) componentsJoinedByString:@""];
+    colors = [NSString stringWithFormat:@"%@", colors];
+    card.mtgColors = colors;
+    card.mtgTypes = [((NSArray<NSString *> *) content[@"types"]) componentsJoinedByString:@""];
+    card.mtgTypes = content[@"text"];
+    NSString *bottomRight;
+    if (content[@"power"]) {
+        bottomRight = [NSString stringWithFormat:@"%@ / %@", content[@"power"], content[@"toughness"]];
+    } else if (content[@"loyalty"]) {
+        bottomRight = [NSString stringWithFormat:@"%@", content[@"loyalty"]];
     }
-    card.colors = [cardColors copy];
+    card.mtgBtmRightDescription = bottomRight;
+    
 }
 
 @end
