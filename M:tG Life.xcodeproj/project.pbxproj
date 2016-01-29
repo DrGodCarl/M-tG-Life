@@ -30,6 +30,7 @@
 		BE97724D1C45F65200582305 /* MTGCardCount+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9772461C45F65200582305 /* MTGCardCount+CoreDataProperties.m */; };
 		BE97724E1C45F65200582305 /* MTGCardCount.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9772481C45F65200582305 /* MTGCardCount.m */; };
 		BEC15EF51C3CC85300F160B3 /* ZPLFetchedResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC15EF41C3CC85300F160B3 /* ZPLFetchedResultsController.m */; };
+		BEFE4C331C5AFBA300497E94 /* Debug-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEFE4C321C5AFBA300497E94 /* Debug-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		BE9772481C45F65200582305 /* MTGCardCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTGCardCount.m; sourceTree = "<group>"; };
 		BEC15EF31C3CC85300F160B3 /* ZPLFetchedResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPLFetchedResultsController.h; sourceTree = "<group>"; };
 		BEC15EF41C3CC85300F160B3 /* ZPLFetchedResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPLFetchedResultsController.m; sourceTree = "<group>"; };
+		BEFE4C321C5AFBA300497E94 /* Debug-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Debug-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 				BE283CE41C33611C00E71598 /* Main.storyboard */,
 				BE283CEA1C33611C00E71598 /* Assets.xcassets */,
 				BE283CEC1C33611C00E71598 /* LaunchScreen.storyboard */,
+				BEFE4C321C5AFBA300497E94 /* Debug-Info.plist */,
 				BE283CEF1C33611C00E71598 /* Info.plist */,
 				BE283CDB1C33611C00E71598 /* Supporting Files */,
 			);
@@ -360,6 +363,7 @@
 			files = (
 				BE283CEE1C33611C00E71598 /* LaunchScreen.storyboard in Resources */,
 				BE283CEB1C33611C00E71598 /* Assets.xcassets in Resources */,
+				BEFE4C331C5AFBA300497E94 /* Debug-Info.plist in Resources */,
 				BE283CE61C33611C00E71598 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -543,7 +547,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "M:tG Life/Info.plist";
+				INFOPLIST_FILE = "M:tG Life/Debug-Info.plist";
+				INFOPLIST_PREPROCESS = NO;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zeropointlogic.M-tG-Life";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -555,6 +560,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "M:tG Life/Info.plist";
+				INFOPLIST_PREPROCESS = NO;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zeropointlogic.M-tG-Life";
 				PRODUCT_NAME = "$(TARGET_NAME)";

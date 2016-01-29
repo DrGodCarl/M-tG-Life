@@ -24,7 +24,6 @@
     id<ZPLCoreDataConsumer>rootViewController = (id<ZPLCoreDataConsumer>)[[self window] rootViewController];
     [rootViewController ingestCoreDataManager:self.coreDataManager];
     // Override point for customization after application launch.
-    [ZPLCardSetup insertInitialDataIntoCoreData:self.coreDataManager];
     return YES;
 }
 
@@ -124,6 +123,12 @@
     }
     _coreDataManager = [[ZPLCoreDataManager alloc] initWithManagedObjectContext:self.managedObjectContext];
     return _coreDataManager;
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(nonnull NSURL *)url options:(nonnull NSDictionary<NSString *,id> *)options {
+    [ZPLCardSetup insertInitialDataIntoCoreData:self.coreDataManager
+                                       jsonFile:url];
+    return YES;
 }
 
 
