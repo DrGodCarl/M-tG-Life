@@ -43,19 +43,19 @@
 
 + (void)insertCard:(NSDictionary *)content named:(NSString *)cardName intoCoreData:(ZPLCoreDataManager *)coreDataManager {
     MTGCard *card = [coreDataManager createNewCard];
-    card.name = cardName;
+    card.mtgName = cardName;
     NSString *colors = [((NSArray<NSString *> *)content[@"colors"]) componentsJoinedByString:@""];
     colors = [NSString stringWithFormat:@"%@", colors];
-    card.colors = colors;
-    card.types = [((NSArray<NSString *> *) content[@"types"]) componentsJoinedByString:@""];
-    card.text = content[@"text"];
+    card.mtgColors = colors;
+    card.mtgTypes = [((NSArray<NSString *> *) content[@"types"]) componentsJoinedByString:@""];
+    card.mtgTypes = content[@"text"];
     NSString *bottomRight;
     if (content[@"power"]) {
         bottomRight = [NSString stringWithFormat:@"%@ / %@", content[@"power"], content[@"toughness"]];
     } else if (content[@"loyalty"]) {
         bottomRight = [NSString stringWithFormat:@"%@", content[@"loyalty"]];
     }
-    card.btmRightDescription = bottomRight;
+    card.mtgBtmRightDescription = bottomRight;
     
 }
 

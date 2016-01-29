@@ -11,24 +11,27 @@
 
 @implementation MTGCard
 
-- (NSString *)fetchName {
-    return self.name;
-}
-
-- (NSString *)fetchText {
-    return self.text;
-}
-
-- (NSString *)firstLetterOfName {
+#pragma mark - MTGCard
+- (NSString *)mtgFirstLetterOfName {
     return [[self.name substringToIndex:1] uppercaseString];
 }
 
-- (NSArray<NSString *> *)fetchColors {
-    return [self.colors componentsSeparatedByString:@", "];
+
+#pragma mark - ZPLCardProtocol
+- (NSString *)name {
+    return self.mtgName;
 }
 
-- (NSArray<NSString *> *)fetchTypes {
-    return [self.types componentsSeparatedByString:@", "];
+- (NSString *)text {
+    return self.mtgText;
+}
+
+- (NSArray<NSString *> *)colors {
+    return [self.mtgColors componentsSeparatedByString:@", "];
+}
+
+- (NSArray<NSString *> *)types {
+    return [self.mtgTypes componentsSeparatedByString:@", "];
 }
 
 

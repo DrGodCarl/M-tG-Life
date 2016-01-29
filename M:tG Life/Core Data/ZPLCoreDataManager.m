@@ -59,12 +59,12 @@
                                               inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     [fetchRequest setFetchBatchSize:50];
-    NSSortDescriptor *nameDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+    NSSortDescriptor *nameDescriptor = [[NSSortDescriptor alloc] initWithKey:@"mtgName" ascending:YES];
     NSArray *sortDescriptors = @[nameDescriptor];
     [fetchRequest setSortDescriptors:sortDescriptors];
     NSFetchedResultsController *controller = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
                                                                                  managedObjectContext:self.managedObjectContext
-                                                                                   sectionNameKeyPath:@"firstLetterOfName"
+                                                                                   sectionNameKeyPath:@"mtgFirstLetterOfName"
                                                                                             cacheName:@"allCards"];
     NSError *error;
     if (![controller performFetch:&error]) {
@@ -88,7 +88,7 @@
 
 - (MTGCard *)mtgCardForName:(NSString *)name {
     NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:NSStringFromClass(MTGCard.class)];
-    request.predicate = [NSPredicate predicateWithFormat:@"name == %@", name];
+    request.predicate = [NSPredicate predicateWithFormat:@"mtgName == %@", name];
     NSArray<MTGCard *> *cards = [self.managedObjectContext executeFetchRequest:request error:nil];
     if (![cards count]) {
         return nil;

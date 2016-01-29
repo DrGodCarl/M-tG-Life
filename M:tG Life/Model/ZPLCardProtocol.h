@@ -9,9 +9,9 @@
 
 @protocol ZPLCardProtocol <NSObject>
 
-- (NSString *)fetchName;
-- (NSString *)fetchText;
-- (NSArray<NSString *> *)fetchColors;
-- (NSArray<NSString *> *)fetchTypes;
+- (NSString *)name;
+- (NSString *)text;
+- (NSArray<NSString *> *)colors;
+- (NSArray<NSString *> *)types;
 
 @end

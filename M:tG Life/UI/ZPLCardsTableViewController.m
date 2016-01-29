@@ -59,7 +59,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CardCell" forIndexPath:indexPath];
     id<ZPLCardProtocol> card = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    [cell.textLabel setText:[card fetchName]];
+    [cell.textLabel setText:[card name]];
     // Configure the cell...
     
     return cell;

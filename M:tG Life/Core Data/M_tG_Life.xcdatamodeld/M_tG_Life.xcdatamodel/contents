@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="14F1021" minimumToolsVersion="Automatic">
     <entity name="MTGCard" representedClassName="MTGCard" syncable="YES">
-        <attribute name="btmRightDescription" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="colors" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="firstLetterOfName" optional="YES" transient="YES" attributeType="String" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="types" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="cardCounts" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MTGCardCount" inverseName="card" inverseEntity="MTGCardCount" syncable="YES"/>
+        <attribute name="mtgBtmRightDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mtgColors" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mtgFirstLetterOfName" optional="YES" transient="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mtgName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mtgText" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mtgTypes" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="mtgCardCounts" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MTGCardCount" inverseName="mtgCard" inverseEntity="MTGCardCount" syncable="YES"/>
     </entity>
     <entity name="MTGCardCount" representedClassName="MTGCardCount" syncable="YES">
-        <attribute name="count" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <relationship name="card" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MTGCard" inverseName="cardCounts" inverseEntity="MTGCard" syncable="YES"/>
-        <relationship name="deck" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MTGDeck" inverseName="cardCounts" inverseEntity="MTGDeck" syncable="YES"/>
+        <attribute name="mtgCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="mtgCard" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MTGCard" inverseName="mtgCardCounts" inverseEntity="MTGCard" syncable="YES"/>
+        <relationship name="mtgDeck" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MTGDeck" inverseName="mtgCardCounts" inverseEntity="MTGDeck" syncable="YES"/>
     </entity>
     <entity name="MTGDeck" representedClassName="MTGDeck" syncable="YES">
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="cardCounts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MTGCardCount" inverseName="deck" inverseEntity="MTGCardCount" syncable="YES"/>
+        <attribute name="mtgName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="mtgCardCounts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MTGCardCount" inverseName="mtgDeck" inverseEntity="MTGCardCount" syncable="YES"/>
     </entity>
     <elements>
         <element name="MTGCard" positionX="-36" positionY="9" width="128" height="150"/>
