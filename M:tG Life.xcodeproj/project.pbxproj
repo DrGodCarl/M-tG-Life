@@ -30,7 +30,9 @@
 		BE97724D1C45F65200582305 /* MTGCardCount+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9772461C45F65200582305 /* MTGCardCount+CoreDataProperties.m */; };
 		BE97724E1C45F65200582305 /* MTGCardCount.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9772481C45F65200582305 /* MTGCardCount.m */; };
 		BEC15EF51C3CC85300F160B3 /* ZPLFetchedResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC15EF41C3CC85300F160B3 /* ZPLFetchedResultsController.m */; };
-		BEFE4C331C5AFBA300497E94 /* Debug-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEFE4C321C5AFBA300497E94 /* Debug-Info.plist */; };
+		BEFE4C3B1C5B189600497E94 /* ZPLCardSearchViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFE4C3A1C5B189600497E94 /* ZPLCardSearchViewModel.m */; };
+		BEFE4C491C6040A900497E94 /* ZPLCardSearchViewModel+Type.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFE4C481C6040A900497E94 /* ZPLCardSearchViewModel+Type.m */; };
+		BEFE4C4B1C60418D00497E94 /* ZPLCardSearchViewModel_TypeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFE4C4A1C60418D00497E94 /* ZPLCardSearchViewModel_TypeTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,11 @@
 		BEC15EF31C3CC85300F160B3 /* ZPLFetchedResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPLFetchedResultsController.h; sourceTree = "<group>"; };
 		BEC15EF41C3CC85300F160B3 /* ZPLFetchedResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPLFetchedResultsController.m; sourceTree = "<group>"; };
 		BEFE4C321C5AFBA300497E94 /* Debug-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Debug-Info.plist"; sourceTree = "<group>"; };
+		BEFE4C391C5B189600497E94 /* ZPLCardSearchViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPLCardSearchViewModel.h; sourceTree = "<group>"; };
+		BEFE4C3A1C5B189600497E94 /* ZPLCardSearchViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPLCardSearchViewModel.m; sourceTree = "<group>"; };
+		BEFE4C471C6040A900497E94 /* ZPLCardSearchViewModel+Type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZPLCardSearchViewModel+Type.h"; sourceTree = "<group>"; };
+		BEFE4C481C6040A900497E94 /* ZPLCardSearchViewModel+Type.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ZPLCardSearchViewModel+Type.m"; sourceTree = "<group>"; };
+		BEFE4C4A1C60418D00497E94 /* ZPLCardSearchViewModel_TypeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPLCardSearchViewModel_TypeTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +135,7 @@
 		BA1F48301C3370FB000B5CE3 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				BEFE4C341C5B14CE00497E94 /* ViewModels */,
 				BA1F48371C338CEA000B5CE3 /* ZPLCardsTableViewController.h */,
 				BA1F48381C338CEA000B5CE3 /* ZPLCardsTableViewController.m */,
 				BA1F48341C337F1F000B5CE3 /* ZPLCollectionViewController.h */,
@@ -203,6 +211,7 @@
 			children = (
 				BE283CF81C33611C00E71598 /* M_tG_LifeTests.m */,
 				BE283CFA1C33611C00E71598 /* Info.plist */,
+				BEFE4C4A1C60418D00497E94 /* ZPLCardSearchViewModel_TypeTest.m */,
 			);
 			path = "M:tG LifeTests";
 			sourceTree = "<group>";
@@ -256,6 +265,25 @@
 				BE283D251C336CF100E71598 /* ZPLCardSetup.m */,
 			);
 			path = Setup;
+			sourceTree = "<group>";
+		};
+		BEFE4C341C5B14CE00497E94 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BEFE4C381C5B187E00497E94 /* CardSearch */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		BEFE4C381C5B187E00497E94 /* CardSearch */ = {
+			isa = PBXGroup;
+			children = (
+				BEFE4C391C5B189600497E94 /* ZPLCardSearchViewModel.h */,
+				BEFE4C3A1C5B189600497E94 /* ZPLCardSearchViewModel.m */,
+				BEFE4C471C6040A900497E94 /* ZPLCardSearchViewModel+Type.h */,
+				BEFE4C481C6040A900497E94 /* ZPLCardSearchViewModel+Type.m */,
+			);
+			path = CardSearch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,7 +391,6 @@
 			files = (
 				BE283CEE1C33611C00E71598 /* LaunchScreen.storyboard in Resources */,
 				BE283CEB1C33611C00E71598 /* Assets.xcassets in Resources */,
-				BEFE4C331C5AFBA300497E94 /* Debug-Info.plist in Resources */,
 				BE283CE61C33611C00E71598 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,10 +422,12 @@
 				BE97724A1C45F65200582305 /* MTGDeck.m in Sources */,
 				BE97724E1C45F65200582305 /* MTGCardCount.m in Sources */,
 				BEC15EF51C3CC85300F160B3 /* ZPLFetchedResultsController.m in Sources */,
+				BEFE4C491C6040A900497E94 /* ZPLCardSearchViewModel+Type.m in Sources */,
 				BE9772491C45F65200582305 /* MTGDeck+CoreDataProperties.m in Sources */,
 				BE283CE01C33611C00E71598 /* AppDelegate.m in Sources */,
 				BE283D1F1C336C5E00E71598 /* ZPLCoreDataManager.m in Sources */,
 				BE283CDD1C33611C00E71598 /* main.m in Sources */,
+				BEFE4C3B1C5B189600497E94 /* ZPLCardSearchViewModel.m in Sources */,
 				BA5B8CC71C3CBF0A00900BB1 /* ZPLDecksTableViewController.m in Sources */,
 				BA1F48361C337F1F000B5CE3 /* ZPLCollectionViewController.m in Sources */,
 				BE97724B1C45F65200582305 /* MTGCard+CoreDataProperties.m in Sources */,
@@ -415,6 +444,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE283CF91C33611C00E71598 /* M_tG_LifeTests.m in Sources */,
+				BEFE4C4B1C60418D00497E94 /* ZPLCardSearchViewModel_TypeTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

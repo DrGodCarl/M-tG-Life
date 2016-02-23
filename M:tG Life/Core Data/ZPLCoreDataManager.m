@@ -9,6 +9,7 @@
 #import "ZPLCoreDataManager.h"
 
 #import "MTGCard.h"
+#import "MTGDeck.h"
 #import "ZPLFetchedResultsController.h"
 
 @interface ZPLCoreDataManager()
@@ -40,8 +41,8 @@
 }
 
 // This is pretty verbose to repeat over and over again.
-- (__kindof NSManagedObject *)createNewManagedObjectForClass:(Class)clazz {
-    return [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass(clazz)
+- (__kindof NSManagedObject *)createNewManagedObjectForClass:(Class)class {
+    return [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass(class)
                                          inManagedObjectContext:self.managedObjectContext];
 }
 
@@ -53,25 +54,44 @@
     return card;
 }
 
-- (ZPLFetchedResultsController<MTGCard *> *)fetchAllCards {
+- (ZPLFetchedResultsController *)performFetchWithEntity:(Class)class
+                                         fetchBatchSize:(NSUInteger)batchSize
+                                        sortDescriptors:(NSArray<NSSortDescriptor *> *)sortDescriptors
+                                     sectionNameKeyPath:(NSString *)sectionNameKeyPath
+                                              cacheName:(NSString *)cacheName {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:NSStringFromClass(MTGCard.class)
+    NSEntityDescription *entity = [NSEntityDescription entityForName:NSStringFromClass(class)
                                               inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     [fetchRequest setFetchBatchSize:50];
-    NSSortDescriptor *nameDescriptor = [[NSSortDescriptor alloc] initWithKey:@"mtgName" ascending:YES];
-    NSArray *sortDescriptors = @[nameDescriptor];
     [fetchRequest setSortDescriptors:sortDescriptors];
     NSFetchedResultsController *controller = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
                                                                                  managedObjectContext:self.managedObjectContext
-                                                                                   sectionNameKeyPath:@"mtgFirstLetterOfName"
-                                                                                            cacheName:@"allCards"];
+                                                                                   sectionNameKeyPath:sectionNameKeyPath
+                                                                                            cacheName:cacheName];
     NSError *error;
     if (![controller performFetch:&error]) {
         NSLog(@"%@", error);
         return nil;
     }
     return [[ZPLFetchedResultsController alloc] initWithManagedResultsController:controller];
+}
+
+
+- (ZPLFetchedResultsController<MTGCard *> *)fetchAllCards {
+    return [self performFetchWithEntity:MTGCard.class
+                         fetchBatchSize:50
+                        sortDescriptors:@[[[NSSortDescriptor alloc] initWithKey:@"mtgName" ascending:YES]]
+                     sectionNameKeyPath:@"mtgFirstLetterOfName"
+                              cacheName:@"allCards"];
+}
+
+- (ZPLFetchedResultsController<MTGDeck *> *)fetchAllDecks {
+    return [self performFetchWithEntity:MTGDeck.class
+                         fetchBatchSize:50
+                        sortDescriptors:@[[[NSSortDescriptor alloc] initWithKey:@"mtgManaOrder" ascending:YES]]
+                     sectionNameKeyPath:nil
+                              cacheName:@"allDecks"];
 }
 
 #pragma mark - Hidden / Internal methods

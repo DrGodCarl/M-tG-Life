@@ -15,12 +15,13 @@
         <relationship name="mtgDeck" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MTGDeck" inverseName="mtgCardCounts" inverseEntity="MTGDeck" syncable="YES"/>
     </entity>
     <entity name="MTGDeck" representedClassName="MTGDeck" syncable="YES">
+        <attribute name="mtgColorEnum" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="mtgName" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="mtgCardCounts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MTGCardCount" inverseName="mtgDeck" inverseEntity="MTGCardCount" syncable="YES"/>
     </entity>
     <elements>
         <element name="MTGCard" positionX="-36" positionY="9" width="128" height="150"/>
         <element name="MTGCardCount" positionX="-54" positionY="-9" width="128" height="90"/>
-        <element name="MTGDeck" positionX="9" positionY="135" width="128" height="75"/>
+        <element name="MTGDeck" positionX="9" positionY="135" width="128" height="90"/>
     </elements>
 </model>
